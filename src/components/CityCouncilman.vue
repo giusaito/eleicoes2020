@@ -122,11 +122,11 @@ export default {
 		}
 	},
 	methods: {
-		listarVereadores: function () {
+		async listarVereadores() {
 			// var url = this.baseUrl + '/static/1turno/estado/br/br-c0001-e00295.json';
 			// var url = this.baseUrl + estado+"/"+estado+"-c"+cargo+"-e00"+neEstadual+".json?t="+timestamp;
 			var url = this.baseUrl + "/static/1turno/estado/pr/pr-c0001-e007555-w.json";
-			axios
+			await axios
 			.get(url)
 			.then(response => {
 				this.vereadores = response.data;
@@ -141,6 +141,9 @@ export default {
 	},
 	mounted(){
 		this.listarVereadores();
+		setInterval(async () => {
+			this.listarVereadores();
+		}, 10000)
 	}
 }
 </script>
