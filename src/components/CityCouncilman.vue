@@ -42,176 +42,32 @@
 		        <span>
 		          <div class="candidates-content">
 		            <ul class="list-items type-councilman container-governador">
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000609226.jpg" alt="RATINHO JUNIOR"></div>
-		                  </li>
-		                  <li class="item-name">RATINHO JUNIOR</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: RATINHO JUNIOR se elegeu!" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: RATINHO JUNIOR se elegeu!" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PSD</li>
-		                      <li class="item-votes-vp">59,99<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">3.210.712</li>
-		                  <li class="item-notification elected-1"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000622844.jpg" alt="CIDA BORGHETTI"></div>
-		                  </li>
-		                  <li class="item-name">CIDA BORGHETTI</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: CIDA BORGHETTI" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: CIDA BORGHETTI" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PP</li>
-		                      <li class="item-votes-vp">15,53<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">831.361</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000621963.jpg" alt="JOÃO ARRUDA"></div>
-		                  </li>
-		                  <li class="item-name">JOÃO ARRUDA</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: JOÃO ARRUDA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: JOÃO ARRUDA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">MDB</li>
-		                      <li class="item-votes-vp">13,19<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">705.976</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000623009.jpg" alt="DR. ROSINHA"></div>
-		                  </li>
-		                  <li class="item-name">DR. ROSINHA</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: DR. ROSINHA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: DR. ROSINHA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PT</li>
-		                      <li class="item-votes-vp">8,66<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">463.494</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000625783.jpg" alt="PROFESSOR PIVA"></div>
-		                  </li>
-		                  <li class="item-name">PROFESSOR PIVA</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: PROFESSOR PIVA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: PROFESSOR PIVA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PSOL</li>
-		                      <li class="item-votes-vp">1,09<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">58.533</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000609975.jpg" alt="PROFESSOR JORGE BERNARDI"></div>
-		                  </li>
-		                  <li class="item-name">PROFESSOR JORGE BERNARDI</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: PROFESSOR JORGE BERNARDI" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: PROFESSOR JORGE BERNARDI" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">REDE</li>
-		                      <li class="item-votes-vp">1<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">53.566</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000621507.jpg" alt="GEONISIO MARINHO"></div>
-		                  </li>
-		                  <li class="item-name">GEONISIO MARINHO</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: GEONISIO MARINHO" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: GEONISIO MARINHO" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PRTB</li>
-		                      <li class="item-votes-vp">0,34<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">18.021</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000621951.jpg" alt="PROFESSOR IVAN BERNARDO"></div>
-		                  </li>
-		                  <li class="item-name">PROFESSOR IVAN BERNARDO</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: PROFESSOR IVAN BERNARDO" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: PROFESSOR IVAN BERNARDO" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PSTU</li>
-		                      <li class="item-votes-vp">0,12<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">6.256</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000617072.jpg" alt="PRISCILA EBARA"></div>
-		                  </li>
-		                  <li class="item-name">PRISCILA EBARA</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: PRISCILA EBARA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: PRISCILA EBARA" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PCO</li>
-		                      <li class="item-votes-vp">0,08<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">4.103</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
-		              <li class="list-item list-item-candidate candidates-running-true">
-		                <ul>
-		                  <li class="item-favorite">
-		                    <div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517"><img class="candidate-image" src="https://dev.cgn.inf.br/wp-content/themes/zox-news/eleicoes/fotos/160000628455.jpg" alt="OGIER BUCHI"></div>
-		                  </li>
-		                  <li class="item-name">OGIER BUCHI</li>
-		                  <li class="item-social"><span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: OGIER BUCHI" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span><span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: OGIER BUCHI" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr"></span></li>
-		                  <li class="item-small-set">
-		                    <ul>
-		                      <li class="item-party">PSL</li>
-		                      <li class="item-votes-vp">0<span>%</span></li>
-		                    </ul>
-		                  </li>
-		                  <li class="item-votes-v">0</li>
-		                  <li class="item-notification elected-0"></li>
-		                </ul>
-		              </li>
+						<li class="list-item list-item-candidate candidates-running-true" v-for="(vereador, index) in vereadores.cand" :key="index">
+							<ul>
+								<li class="item-favorite">
+									<div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517">
+										<!-- <img class="candidate-image"  :src="`/static/fotos/${vereador.sqcand}.jpg`" :title="vereador.nm" :alt="vereador.nm"> -->
+										<img class="candidate-image"  src="/static/fotos/280000601173.jpg" :title="vereador.nm" :alt="vereador.nm">
+									</div>
+								</li>
+								<li class="item-name">{{vereador.nm}}</li>
+								<li class="item-social">
+									<span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: RATINHO JUNIOR se elegeu!" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr">
+									</span>
+									<span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: RATINHO JUNIOR se elegeu!" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr">
+									</span>
+								</li>
+								<li class="item-small-set">
+									<ul>
+									<li class="item-party">{{vereador.cc | politicalParty}}</li>
+									<li class="item-votes-vp">{{vereador.v | votePercentage}}<span>%</span></li>
+									</ul>
+								</li>
+								<li class="item-votes-v">{{vereador.v | voteTotal}}</li>
+								<li class="item-notification elected-1" v-if="vereador.e === 's'"></li>
+								<li class="item-notification elected-0" v-if="vereador.e === 'n'"></li>
+							</ul>
+						</li>
 		            </ul>
 		          </div>
 		        </span>
@@ -228,3 +84,63 @@
 		</div>
 	</div>
 </template>
+
+<script>
+//var baseUrlEstadosJson = "/assets/eleicoes/1turno/estado/json/";
+//$.getJSON( baseUrlEstadosJson+estado+"/"+estado+"-c"+cargo+"-e00"+neEstadual+".json?t="+timestamp, function( data ) {
+export default {
+	name: 'CityConcilman',
+	data () {
+	return {
+		vereadores: []
+	}
+	},
+	filters: {
+		votePercentage: function (value) {
+			if (value > 0){
+				var percentage;
+				percentage = value * 100 / 107050530;
+				percentage = parseFloat(percentage.toFixed(2));
+				percentage = percentage.toString();
+				percentage = percentage.replace(".", ",");
+				return percentage;
+			}else {
+				return 0;
+			}
+		},
+		politicalParty: function(value){
+			return value.split(' - ')[0]
+		},
+		voteTotal: function (n){
+			var n = ''+n, t = n.length -1, novo = '';
+
+			for( var i = t, a = 1; i >=0; i--, a++ ){
+				var ponto = a % 3 == 0 && i > 0 ? '.' : '';
+				novo = ponto + n.charAt(i) + novo;
+			}
+			return novo;
+		}
+	},
+	methods: {
+		listarVereadores: function () {
+			// var url = this.baseUrl + '/static/1turno/estado/br/br-c0001-e00295.json';
+			// var url = this.baseUrl + estado+"/"+estado+"-c"+cargo+"-e00"+neEstadual+".json?t="+timestamp;
+			var url = this.baseUrl + "/static/1turno/estado/pr/pr-c0001-e007555-w.json";
+			axios
+			.get(url)
+			.then(response => {
+				this.vereadores = response.data;
+				console.log(this.vereadores);
+			})
+			.catch(error => {
+				console.log(error)
+				this.errored = true
+			})
+			.finally(() => this.loading = false)
+		}
+	},
+	mounted(){
+		this.listarVereadores();
+	}
+}
+</script>
