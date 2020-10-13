@@ -16,9 +16,9 @@
 		        </ul> -->
 		        <div class="councilman-search disabled-false">
 		          <i class="icon-close"></i>
-		          <form ref="formulario" class="suggest-form">
+		          <!-- <form ref="formulario" class="suggest-form"> -->
 		            <div class="ui-widget">
-		              <input type="text" class="councilman-search-input suggest-input" name="q" autocomplete="off" placeholder="Encontre candidatos para seguir a apuração">
+		              <input type="text" class="councilman-search-input suggest-input" v-model="searchQuery" name="q" autocomplete="off" placeholder="Encontre candidatos para seguir a apuração">
 		            </div>
 		            <div class="fading-circle">
 		              <div class="circle1 circle"></div>
@@ -35,14 +35,14 @@
 		              <div class="circle12 circle"></div>
 		            </div>
 		            <div class="suggest-area suggest-area-disabled"></div>
-		          </form>
+		          <!-- </form> -->
 		        </div>
 		      </div>
 		      <div class="councilman-list list-content">
 		        <span>
 		          <div class="candidates-content">
 		            <ul class="list-items type-councilman container-governador">
-						<li class="list-item list-item-candidate candidates-running-true" v-for="(vereador, index) in vereadores.cand" :key="index">
+						<li class="list-item list-item-candidate candidates-running-true" v-for="(vereador, index) in rListarVereadores" :key="index">
 							<ul>
 								<li class="item-favorite">
 									<div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517">
@@ -92,6 +92,7 @@ export default {
 	name: 'CityConcilman',
 	data () {
 	return {
+		searchQuery: null,
 		vereadores: []
 	}
 	},
@@ -144,6 +145,19 @@ export default {
 		setInterval(async () => {
 			this.listarVereadores();
 		}, 10000)
+	},
+	computed: {
+		rListarVereadores(){
+			// alert(this.$options.filters.votePercentage('677957'));
+			if(this.searchQuery){
+				return this.vereadores.cand.filter((item)=>{
+					return this.searchQuery.toLowerCase().split(' ').every(v => item.nm.toLowerCase().includes(v)) || 
+					this.searchQuery.toLowerCase().split(' ').every(v => item.cc.toLowerCase().includes(v))
+				})
+			}else{
+				return this.vereadores.cand;
+			}
+		}
 	}
 }
 </script>
