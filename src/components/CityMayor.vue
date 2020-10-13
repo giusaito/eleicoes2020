@@ -86,6 +86,8 @@
 			percentage = percentage.toString();
 			percentage = percentage.replace(".", ",");
 			return percentage;
+		} else {
+			return 0;
 		}
 	  },
 	  politicalParty: function(value){
@@ -120,7 +122,7 @@
   },
   mounted(){
   	this.fetchUsers();
-  }
+  },
 
 }
 </script>
