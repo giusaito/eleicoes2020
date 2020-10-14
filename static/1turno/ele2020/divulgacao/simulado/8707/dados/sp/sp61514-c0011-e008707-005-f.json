@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "61514", "nmabr" : "APARECIDA D&apos;OESTE", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:12", "v" : "004", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "SP", "nm" : "SÃO PAULO", "mun" : [ 
+{ "cd" : "61514", "nm" : "APARECIDA D&apos;OESTE", "c" : "N", "s" : "17", "e" : "6031", "tzon" : "1", "zon" : [ 
+{ "cd" : "0232", "s" : "17", "e" : "6031" } ] } ] } ] }, "carg" : 
+{ "cd" : "11", "nmn" : "Prefeito", "nmm" : "Prefeito", "nmf" : "Prefeita", "nv" : "1", "col" : [  ] } }

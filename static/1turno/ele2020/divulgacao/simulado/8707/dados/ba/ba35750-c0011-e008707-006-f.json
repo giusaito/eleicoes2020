@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "35750", "nmabr" : "INHAMBUPE", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:02", "v" : "005", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "BA", "nm" : "BAHIA", "mun" : [ 
+{ "cd" : "35750", "nm" : "INHAMBUPE", "c" : "N", "s" : "84", "e" : "25862", "tzon" : "1", "zon" : [ 
+{ "cd" : "0044", "s" : "84", "e" : "25862" } ] } ] } ] }, "carg" : 
+{ "cd" : "11", "nmn" : "Prefeito", "nmm" : "Prefeito", "nmf" : "Prefeita", "nv" : "1", "col" : [  ] } }

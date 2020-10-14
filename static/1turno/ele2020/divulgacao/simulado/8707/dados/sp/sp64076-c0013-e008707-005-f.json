@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "64076", "nmabr" : "ESTRELA DO NORTE", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:10", "v" : "004", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "SP", "nm" : "SÃO PAULO", "mun" : [ 
+{ "cd" : "64076", "nm" : "ESTRELA DO NORTE", "c" : "N", "s" : "8", "e" : "2600", "tzon" : "1", "zon" : [ 
+{ "cd" : "0261", "s" : "8", "e" : "2600" } ] } ] } ] }, "carg" : 
+{ "cd" : "13", "nmn" : "Vereador", "nmm" : "Vereador", "nmf" : "Vereadora", "nv" : "11", "col" : [  ] } }

@@ -4,7 +4,7 @@
 		  <h2 class="heading">PREFEITO</h2>
 		  <div id="presidente" class="lift-box">
 		    <div class="avatares clearfix">
-		      <div class="avatar avatar-left" v-for="(mayor, index) in candidateMayor.cand" :key="index">
+		      <div class="avatar avatar-left" v-for="(mayor, index) in sortedArray" :key="index">
 		        <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-if="index <= 1">
 		          <span>
 		          	<span class="candidate-mask">
@@ -36,7 +36,7 @@
 		    <div class="mayor-list list-content">
 		      <span>
 		        <ul class="list-items type-mayor">
-		          <li class="list-item candidate-running-true" v-for="(mayor, index) in candidateMayor.cand" :key="index">
+		          <li class="list-item candidate-running-true" v-for="(mayor, index) in sortedArray" :key="index">
 		            <ul v-if="index >= 2">
 		              <li class="item-name">{{mayor.nm}}</li>
 		              <li class="item-social">
@@ -59,9 +59,9 @@
 		  </div>
 		  <div class="main-votes-count mayor-votes-count clearfix">
 		    <div class="votes-count">
-		      <div class="item white"><span class="label">BRANCOS</span><span class="total">3.106.936</span><span class="percent">2,11%</span></div>
-		      <div class="item null"><span class="label">NULOS</span><span class="total">7.206.202</span><span class="percent">4,89%</span></div>
-		      <div class="item valid"><span class="label">VÁLIDOS</span><span class="total">107.050.530</span><span class="percent">72,67%</span></div>
+		      <div class="item white"><span class="label">BRANCOS</span><span class="total">{{ this.infoPrefeitos.cVotosBrancos }}</span><span class="percent">{{ this.infoPrefeitos.pVotosBrancos }}%</span></div>
+		      <div class="item null"><span class="label">NULOS</span><span class="total">{{ this.infoPrefeitos.cVotosNulos }}</span><span class="percent">{{ this.infoPrefeitos.pVotosNulos }}%</span></div>
+		      <div class="item valid"><span class="label">VÁLIDOS</span><span class="total">{{ this.infoPrefeitos.cVotosValidos }}</span><span class="percent">{{ this.infoPrefeitos.pVotosValidos }}%</span></div>
 		    </div>
 		  </div>
 		</div>
@@ -74,7 +74,8 @@
   name: 'CityMaior',
   data () {
     return {
-      candidateMayor: []
+	  prefeitos: [],
+	  infoPrefeitos: []
     }
   },
   filters: {
@@ -103,26 +104,72 @@
 	    return novo;
 	  }
 	},
-  methods: {
-    fetchUsers: function () {
-    	var url = this.baseUrl + '/static/1turno/estado/br/br-c0001-e00295.json';
-       axios
-      // .get(`${this.baseUrl}/static/1turno/data/cidades.json`)
-      .get(url)
-      .then(response => {
-        this.candidateMayor = response.data;
-        console.log(this.candidateMayor);
-      })
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
-    }
-  },
-  mounted(){
-  	this.fetchUsers();
-  },
+  	methods: {
+		milhar(n){
+			var n = ''+n, t = n.length -1, novo = '';
 
+			for( var i = t, a = 1; i >=0; i--, a++ ){
+				var ponto = a % 3 == 0 && i > 0 ? '.' : '';
+				novo = ponto + n.charAt(i) + novo;
+			}
+			return novo;
+		},
+    	fetchUsers: function () {
+    		var url = this.baseUrl + '/static/1turno/estado/br/br-c0001-e00295.json';
+       		axios
+      		.get(url)
+      		.then(response => {
+				this.prefeitos = response.data.cand;
+				this.infoPrefeitos = {
+					cVotosBrancos: response.data['vb'],
+					cVotosNulos: response.data['vn'],
+					cVotosValidos: response.data['vv'],
+					eleitoresTotal: response.data['e'],
+				}
+				this.infoPrefeitos.pVotosBrancos = this.infoPrefeitos.cVotosBrancos * 100 / this.infoPrefeitos.eleitoresTotal;
+				this.infoPrefeitos.pVotosBrancos = parseFloat(this.infoPrefeitos.pVotosBrancos.toFixed(2));
+				this.infoPrefeitos.pVotosBrancos = this.infoPrefeitos.pVotosBrancos.toString();
+				this.infoPrefeitos.pVotosBrancos = this.infoPrefeitos.pVotosBrancos.replace(".", ","); 
+				this.infoPrefeitos.cVotosBrancos = this.milhar(this.infoPrefeitos.cVotosBrancos);
+
+				this.infoPrefeitos.pVotosNulos = this.infoPrefeitos.cVotosNulos * 100 / this.infoPrefeitos.eleitoresTotal;
+				this.infoPrefeitos.pVotosNulos = parseFloat(this.infoPrefeitos.pVotosNulos.toFixed(2)); 
+				this.infoPrefeitos.pVotosNulos = this.infoPrefeitos.pVotosNulos.toString();
+				this.infoPrefeitos.pVotosNulos = this.infoPrefeitos.pVotosNulos.replace(".", ",");
+				this.infoPrefeitos.cVotosNulos = this.milhar(this.infoPrefeitos.cVotosNulos);
+				
+				this.infoPrefeitos.pVotosValidos = this.infoPrefeitos.cVotosValidos * 100 / this.infoPrefeitos.eleitoresTotal;
+				this.infoPrefeitos.pVotosValidos = parseFloat(this.infoPrefeitos.pVotosValidos.toFixed(2)); 
+				this.infoPrefeitos.pVotosValidos = this.infoPrefeitos.pVotosValidos.toString();
+				this.infoPrefeitos.pVotosValidos = this.infoPrefeitos.pVotosValidos.replace(".", ",");
+				this.infoPrefeitos.cVotosValidos = this.milhar(this.infoPrefeitos.cVotosValidos);
+        		//console.log(this.prefeitos);
+      		})
+      		.catch(error => {
+        		console.log(error)
+        		this.errored = true
+      		})
+      		.finally(() => this.loading = false)
+    	},
+  	},
+  	mounted(){
+	  	this.fetchUsers();
+		setInterval(async () => {
+			this.fetchUsers();
+		}, 10000)
+  	},
+  	computed: {
+		sortedArray: function() {
+			function compare(a, b) {
+				if (Number(a.v) > Number(b.v))
+					return -1;
+				if (Number(a.v) < Number(b.v))
+					return 1;
+					return 0;
+			}
+
+			return this.prefeitos.sort(compare);
+		}
+	}
 }
 </script>

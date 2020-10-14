@@ -43,6 +43,12 @@ import CityCouncilman from './components/CityCouncilman'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      apiPrefeitos: [],
+      apiVereadores: []
+    }
+  },
   components: {
     Header,
     CityInfo,

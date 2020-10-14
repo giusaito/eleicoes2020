@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "20176", "nmabr" : "DUAS ESTRADAS", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:05:33", "v" : "005", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "PB", "nm" : "PARAÍBA", "mun" : [ 
+{ "cd" : "20176", "nm" : "DUAS ESTRADAS", "c" : "N", "s" : "17", "e" : "3229", "tzon" : "1", "zon" : [ 
+{ "cd" : "0047", "s" : "17", "e" : "3229" } ] } ] } ] }, "carg" : 
+{ "cd" : "13", "nmn" : "Vereador", "nmm" : "Vereador", "nmf" : "Vereadora", "nv" : "10", "col" : [  ] } }

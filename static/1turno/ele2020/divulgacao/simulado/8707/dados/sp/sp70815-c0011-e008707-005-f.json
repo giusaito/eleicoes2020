@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "70815", "nmabr" : "SÃO FRANCISCO", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:11", "v" : "004", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "SP", "nm" : "SÃO PAULO", "mun" : [ 
+{ "cd" : "70815", "nm" : "SÃO FRANCISCO", "c" : "N", "s" : "8", "e" : "2588", "tzon" : "1", "zon" : [ 
+{ "cd" : "0232", "s" : "8", "e" : "2588" } ] } ] } ] }, "carg" : 
+{ "cd" : "11", "nmn" : "Prefeito", "nmm" : "Prefeito", "nmf" : "Prefeita", "nv" : "1", "col" : [  ] } }

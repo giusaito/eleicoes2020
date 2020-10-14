@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "33677", "nmabr" : "BELMONTE", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:04", "v" : "005", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "BA", "nm" : "BAHIA", "mun" : [ 
+{ "cd" : "33677", "nm" : "BELMONTE", "c" : "N", "s" : "55", "e" : "15271", "tzon" : "1", "zon" : [ 
+{ "cd" : "0034", "s" : "55", "e" : "15271" } ] } ] } ] }, "carg" : 
+{ "cd" : "11", "nmn" : "Prefeito", "nmm" : "Prefeito", "nmf" : "Prefeita", "nv" : "1", "col" : [  ] } }

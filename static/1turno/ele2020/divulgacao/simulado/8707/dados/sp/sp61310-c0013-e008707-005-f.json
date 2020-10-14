@@ -1,0 +1,8 @@
+
+{ "ele" : "8707", "cdabr" : "61310", "nmabr" : "AMERICANA", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:21", "v" : "004", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "SP", "nm" : "SÃO PAULO", "mun" : [ 
+{ "cd" : "61310", "nm" : "AMERICANA", "c" : "N", "s" : "514", "e" : "184008", "tzon" : "2", "zon" : [ 
+{ "cd" : "0158", "s" : "235", "e" : "85151" }, 
+{ "cd" : "0384", "s" : "279", "e" : "98857" } ] } ] } ] }, "carg" : 
+{ "cd" : "13", "nmn" : "Vereador", "nmm" : "Vereador", "nmf" : "Vereadora", "nv" : "19", "col" : [  ] } }

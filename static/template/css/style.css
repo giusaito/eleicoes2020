@@ -3766,10 +3766,10 @@ body[class*=suggest-open-] .overlay {
 
 .councilman-search {
 	position: relative;
-	padding: 2px 26px 0 20px;
+	padding: 15px 26px 15px 20px;
 	width: 100%;
 	z-index: 0;
-	height: 55px
+	height: 65px
 }
 
 .councilman-search.disabled-true {
@@ -3778,7 +3778,7 @@ body[class*=suggest-open-] .overlay {
 
 .councilman-search:before {
 	position: absolute;
-	top: 14px;
+	top: 27px;
 	left: 38px;
 	font-size: 13px;
 	color: #666;

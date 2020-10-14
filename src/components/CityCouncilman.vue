@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="city-councilman fullheight">
-		  <h2 class="heading">Vereadores</h2>
+		  <h2 class="heading">VEREADORES</h2>
 		  <br>
 		  <div class="councilman-content">
 		    <div class="city-progress-elected">
@@ -76,9 +76,9 @@
 		  </div>
 		  <div class="main-votes-count councilman-votes-count clearfix">
 		    <div class="votes-count">
-		      <div class="item white"><span class="label">BRANCOS</span><span class="total">366.334</span><span class="percent">4,6%</span></div>
-		      <div class="item null"><span class="label">NULOS</span><span class="total">550.549</span><span class="percent">6,91%</span></div>
-		      <div class="item valid"><span class="label">VÁLIDOS</span><span class="total">5.352.022</span><span class="percent">67,17%</span></div>
+		      <div class="item white"><span class="label">BRANCOS</span><span class="total">{{ this.infoVereadores.cVotosBrancos }}</span><span class="percent">{{ this.infoVereadores.pVotosBrancos }}%</span></div>
+		      <div class="item null"><span class="label">NULOS</span><span class="total">{{ this.infoVereadores.cVotosNulos }}</span><span class="percent">{{ this.infoVereadores.pVotosNulos }}%</span></div>
+		      <div class="item valid"><span class="label">VÁLIDOS</span><span class="total">{{ this.infoVereadores.cVotosValidos }}</span><span class="percent">{{ this.infoVereadores.pVotosValidos }}%</span></div>
 		    </div>
 		  </div>
 		</div>
@@ -93,7 +93,8 @@ export default {
 	data () {
 	return {
 		searchQuery: null,
-		vereadores: []
+		vereadores: [],
+		infoVereadores: []
 	}
 	},
 	filters: {
@@ -123,6 +124,15 @@ export default {
 		}
 	},
 	methods: {
+		milhar(n){
+			var n = ''+n, t = n.length -1, novo = '';
+
+			for( var i = t, a = 1; i >=0; i--, a++ ){
+				var ponto = a % 3 == 0 && i > 0 ? '.' : '';
+				novo = ponto + n.charAt(i) + novo;
+			}
+			return novo;
+		},
 		async listarVereadores() {
 			// var url = this.baseUrl + '/static/1turno/estado/br/br-c0001-e00295.json';
 			// var url = this.baseUrl + estado+"/"+estado+"-c"+cargo+"-e00"+neEstadual+".json?t="+timestamp;
@@ -130,8 +140,31 @@ export default {
 			await axios
 			.get(url)
 			.then(response => {
-				this.vereadores = response.data;
-				console.log(this.vereadores);
+				this.vereadores = response.data.cand;
+				this.infoVereadores = {
+					cVotosBrancos: response.data['vb'],
+					cVotosNulos: response.data['vn'],
+					cVotosValidos: response.data['vv'],
+					eleitoresTotal: response.data['e'],
+				}
+				this.infoVereadores.pVotosBrancos = this.infoVereadores.cVotosBrancos * 100 / this.infoVereadores.eleitoresTotal;
+				this.infoVereadores.pVotosBrancos = parseFloat(this.infoVereadores.pVotosBrancos.toFixed(2));
+				this.infoVereadores.pVotosBrancos = this.infoVereadores.pVotosBrancos.toString();
+				this.infoVereadores.pVotosBrancos = this.infoVereadores.pVotosBrancos.replace(".", ","); 
+				this.infoVereadores.cVotosBrancos = this.milhar(this.infoVereadores.cVotosBrancos);
+
+				this.infoVereadores.pVotosNulos = this.infoVereadores.cVotosNulos * 100 / this.infoVereadores.eleitoresTotal;
+				this.infoVereadores.pVotosNulos = parseFloat(this.infoVereadores.pVotosNulos.toFixed(2)); 
+				this.infoVereadores.pVotosNulos = this.infoVereadores.pVotosNulos.toString();
+				this.infoVereadores.pVotosNulos = this.infoVereadores.pVotosNulos.replace(".", ",");
+				this.infoVereadores.cVotosNulos = this.milhar(this.infoVereadores.cVotosNulos);
+				
+				this.infoVereadores.pVotosValidos = this.infoVereadores.cVotosValidos * 100 / this.infoVereadores.eleitoresTotal;
+				this.infoVereadores.pVotosValidos = parseFloat(this.infoVereadores.pVotosValidos.toFixed(2)); 
+				this.infoVereadores.pVotosValidos = this.infoVereadores.pVotosValidos.toString();
+				this.infoVereadores.pVotosValidos = this.infoVereadores.pVotosValidos.replace(".", ",");
+				this.infoVereadores.cVotosValidos = this.milhar(this.infoVereadores.cVotosValidos);
+				// console.log(this.vereadores);
 			})
 			.catch(error => {
 				console.log(error)
@@ -147,15 +180,25 @@ export default {
 		}, 10000)
 	},
 	computed: {
-		rListarVereadores(){
+		rListarVereadores: function() {
 			// alert(this.$options.filters.votePercentage('677957'));
+			function compare(a, b) {
+				if (Number(a.v) > Number(b.v))
+					return -1;
+				if (Number(a.v) < Number(b.v))
+					return 1;
+					return 0;
+			}
+
+			var vereadoresList = this.vereadores.sort(compare);
+
 			if(this.searchQuery){
-				return this.vereadores.cand.filter((item)=>{
+				return vereadoresList.filter((item)=>{
 					return this.searchQuery.toLowerCase().split(' ').every(v => item.nm.toLowerCase().includes(v)) || 
 					this.searchQuery.toLowerCase().split(' ').every(v => item.cc.toLowerCase().includes(v))
 				})
 			}else{
-				return this.vereadores.cand;
+				return vereadoresList;
 			}
 		}
 	}

@@ -8,12 +8,12 @@
     <div class="tooltip-container"></div>
   	<div class="header-bar">
       <span class="share"> 
-        <i class="icon icon-facebook" data-image="https://cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração Eleições 2018" data-desc="Veja mais em: https://cgn.inf.br/eleicoes/" data-url="https://cgn.inf.br/eleicoes/" data-metrics-location="header %page%" data-metrics-action="compartilhar_%page%_facebook"></i> 
-        <i class="icon icon-twitter" data-title="Apuração Eleições 2018" data-desc="Veja mais em: https://cgn.inf.br/eleicoes/" data-url="https://cgn.inf.br/eleicoes/" data-metrics-location="header %page%" data-metrics-action="compartilhar_%page%_twitter"></i> 
+        <i class="icon icon-facebook" data-image="https://cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração Eleições 2020" data-desc="Veja mais em: https://cgn.inf.br/eleicoes/" data-url="https://cgn.inf.br/eleicoes/" data-metrics-location="header %page%" data-metrics-action="compartilhar_%page%_facebook"></i> 
+        <i class="icon icon-twitter" data-title="Apuração Eleições 2020" data-desc="Veja mais em: https://cgn.inf.br/eleicoes/" data-url="https://cgn.inf.br/eleicoes/" data-metrics-location="header %page%" data-metrics-action="compartilhar_%page%_twitter"></i> 
       </span> 
       <h1 class="title"> 
         <span class="election">
-          <a href="https://cgn.inf.br/eleicoes" data-metrics-location="header %page%" data-metrics-action="home_eleicoes">Eleições 2018</a> 
+          <a href="https://cgn.inf.br/eleicoes" data-metrics-location="header %page%" data-metrics-action="home_eleicoes">Eleições 2020</a> 
         </span> 
         <img src="https://i.imgur.com/2xTRzO7.jpg" class="cgn-logo">
         <span class="shift"> 

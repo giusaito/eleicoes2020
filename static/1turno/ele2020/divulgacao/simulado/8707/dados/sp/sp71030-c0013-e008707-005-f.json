@@ -1,0 +1,7 @@
+
+{ "ele" : "8707", "cdabr" : "71030", "nmabr" : "SÃO MANUEL", "t" : "1", "f" : "S", "s" : "N", "dg" : "13/10/2020", "hg" : "20:03:13", "v" : "004", "br" : 
+{ "nm" : "Brasil", "uf" : [ 
+{ "sg" : "SP", "nm" : "SÃO PAULO", "mun" : [ 
+{ "cd" : "71030", "nm" : "SÃO MANUEL", "c" : "N", "s" : "108", "e" : "33144", "tzon" : "1", "zon" : [ 
+{ "cd" : "0129", "s" : "108", "e" : "33144" } ] } ] } ] }, "carg" : 
+{ "cd" : "13", "nmn" : "Vereador", "nmm" : "Vereador", "nmf" : "Vereadora", "nv" : "13", "col" : [  ] } }
