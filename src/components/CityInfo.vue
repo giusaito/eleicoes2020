@@ -80,22 +80,12 @@ export default {
     data () {
       return {
         urnas: [],
-        cidadeSelecionada: [
-          {
-            label:"Cascavel",
-            code:"cascavel"
-          }
-        ],
-        cidades: [
-          {
-            label:"Cascavel",
-            code:"cascavel"
-          },
-          {
-            label:"Toledo",
-            code:"toledo"
-          } 
-        ]
+        cidadeSelecionada: 
+        {
+          label:"Cascavel",
+          code:"74934"
+        },
+        cidades: []
       }
     },
     methods: {
@@ -108,29 +98,59 @@ export default {
         }
         return novo;
       },
-      pegarCidadeSelecionada(value) {
-        alert(value.code);
+      listarCidades(){
+        var url = this.baseUrl + '/static/cidades/pr.json';
+        axios
+          .get(url)
+          .then(response => {
+            this.cidades = response.data;
+          })
+      		.catch(error => {
+        		console.log(error)
+        		this.errored = true
+      		})
+      		.finally(() => this.loading = false)
       },
-      dadosUrna: function () {
-        var url = this.baseUrl + '/static/1turno/estado/br/br-c0001-e00295.json';
-       		axios
-      		.get(url)
-      		.then(response => {
-            console.log(response.data);
+      pegarCidadeSelecionada(value) {
+        // alert(value.code);
+        this.$router.push({path:'/' + value.code });
+        this.dadosUrna(this.$router.history.current.params.id);
+      },
+      dadosUrna: function (codeDefault = null) {
+        if(!codeDefault && this.$router.history.current.params.id) {
+          codeDefault = this.$router.history.current.params.id;
+        }
+        setTimeout(async () => {
+          if(codeDefault){
+            var FiltrarCidade = this.cidades.filter(d => d.code === codeDefault);
+
+            this.cidadeSelecionada.code = codeDefault;
+            this.cidadeSelecionada.label = FiltrarCidade[0].label;
+          }
+          var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
+          axios
+          .get(url)
+          .then(response => {
             this.urnas = {
               barraAtual: "Brasil",
-              localAtual: "Cascavel",
-              totalDeUrnas: response.data['s'],
-              urnasApuradas: response.data['st'],
-              eleitoresTotal: response.data['e'],
-              eleitoresComparecimento: response.data['c'],
-              eleitoreAbstencao: response.data['a']
+              localAtual: this.cidadeSelecionada.label,
+              totalDeUrnas: response.data['abr'][0]['s'],
+              urnasApuradas: response.data['abr'][0]['st'],
+              eleitoresTotal: response.data['abr'][0]['e'],
+              eleitoresComparecimento: response.data['abr'][0]['c'],
+              eleitoreAbstencao: response.data['abr'][0]['a']
             }
             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
+            if(isNaN(this.urnas.votantes)){
+                this.urnas.votantes = 0;
+            }
             this.urnas.votantes = parseFloat(this.urnas.votantes.toFixed(2));
             this.urnas.votantesP = this.urnas.votantes.toString().split(",")[0];
             
             this.urnas.ausentes = this.urnas.eleitoreAbstencao * 100 / this.urnas.eleitoresTotal;
+            if(isNaN(this.urnas.ausentes)){
+                this.urnas.ausentes = 0;
+            }
             this.urnas.ausentes = parseFloat(this.urnas.ausentes.toFixed(2)); 
             this.urnas.ausentesP = this.urnas.ausentes.toString().split(",")[0];
 
@@ -145,17 +165,19 @@ export default {
               this.urnas['naoIniciouApuracao'] = true;
             }
           })
-      		.catch(error => {
-        		console.log(error)
-        		this.errored = true
-      		})
-      		.finally(() => this.loading = false)
+          .catch(error => {
+            console.log(error)
+            this.errored = true
+          })
+          .finally(() => this.loading = false)
+        }, 1000)
       }
     },
   	mounted(){
-	  	this.dadosUrna();
+      this.listarCidades();
+      this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
-        this.dadosUrna();
+        this.dadosUrna(this.$router.history.current.params.id);
       }, 10000)
   	}
 }

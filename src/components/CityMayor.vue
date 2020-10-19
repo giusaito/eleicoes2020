@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<hr><br><br>
 		<div class="city-mayor fullheight">
 		  <h2 class="heading">PREFEITO</h2>
 		  <div id="presidente" class="lift-box">

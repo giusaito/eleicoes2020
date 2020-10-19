@@ -15,8 +15,17 @@ Vue.use(VueRouter)
 Vue.component('v-select', vSelect)
 import 'vue-select/dist/vue-select.css';
 
+const routes = [
+  { path: '/:id', component: App }
+]
+
+const router = new VueRouter({
+  routes 
+})
+
 /* eslint-disable no-new */
 new Vue({
+  router,
   el: '#app',
   components: { App },
   template: '<App/>'
