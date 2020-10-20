@@ -79,6 +79,7 @@
         <h2 class="heading">PREFEITO</h2>
         <div id="presidente" class="lift-box">
           <div class="avatares clearfix">
+            ---{{ listaPrefeitos }}---
             <div class="avatar avatar-left" v-for="(mayor, index) in listaPrefeitos" :key="index">
               <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-if="index <= 1">
                 <span>
@@ -157,6 +158,7 @@ export default {
     data () {
       return {
         urnas: [],
+        dadosPrefeitos: [],
         cidadeSelecionada: 
         {
           label:"Cascavel",
@@ -239,10 +241,29 @@ export default {
           codeDefault = this.$router.history.current.params.id;
         }
         setTimeout(async () => {
+          var vm = this;
           var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
           axios
           .get(url)
           .then(response => {
+            var url2 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
+            axios
+            .get(url2)
+            .then(response2 => {
+              Array.from(response2.data['carg']['col']).forEach(function(value, key){
+                vm.dadosPrefeitos = [].concat(response.data['abr'][0]['cand'][key], value['par'][0]['cand']);
+              });
+            })
+            .catch(error => {
+              console.log(error)
+              this.errored = true
+            })
+            .finally(() => this.loading = false);
+
+console.log('======= oi ========');
+console.log(vm.dadosPrefeitos);
+console.log('======= oi ========');
+
             this.urnas = {
               barraAtual: "Brasil",
               localAtual: this.cidadeSelecionada.label,
@@ -251,7 +272,8 @@ export default {
               eleitoresTotal: response.data['abr'][0]['e'],
               eleitoresComparecimento: response.data['abr'][0]['c'],
               eleitoreAbstencao: response.data['abr'][0]['a'],
-              candidatos: response.data['abr'][0]['cand'],
+              // candidatos: response.data['abr'][0]['cand'],
+              candidatos: this.dadosPrefeitos,
               // info geral da votação
               cVotosBrancos: response.data['vb'],
               cVotosNulos: response.data['vn'],
@@ -330,6 +352,9 @@ export default {
               return 1;
               return 0;
           }
+          console.log('-----');
+          console.log(this.urnas.candidatos);
+          console.log('-----');
           return this.urnas.candidatos.sort(compare);
         }
       }
