@@ -9,7 +9,8 @@
 		        <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-if="index <= 1">
 		          <span>
 		          	<span class="candidate-mask">
-		          		<img class="candidate-image" :src="`/static/fotos/${mayor.sqcand}.jpg`" :title="mayor.nm" :alt="mayor.nm">
+		          		<!-- <img class="candidate-image" :src="`/static/fotos/${mayor.sqcand}.jpg`" :title="mayor.nm" :alt="mayor.nm"> -->
+		          		<img class="candidate-image" :src="`http://divulgacandcontas.tse.jus.br/candidaturas/oficial/2020/PR/75230/426/candidatos/665468/foto.jpeg`" :title="mayor.nm" :alt="mayor.nm">
 		          	</span>
 		          </span>
 		          <div class="gauge">

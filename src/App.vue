@@ -24,11 +24,7 @@
             </div>
           </div>
           <div class="disclaimer-container"></div>
-            <CityInfo/>
-            <div class="max-height">
-              <CityMayor/>
-              <CityCouncilman/>
-            </div>
+            <Prefeitos/>
         </div>
       </div>
     </div>
@@ -37,9 +33,7 @@
 
 <script>
 import Header from './components/Header'
-import CityInfo from './components/CityInfo'
-import CityMayor from './components/CityMayor'
-import CityCouncilman from './components/CityCouncilman'
+import Prefeitos from './components/Prefeitos'
 
 export default {
   name: 'App',
@@ -51,9 +45,7 @@ export default {
   },
   components: {
     Header,
-    CityInfo,
-    CityMayor,
-    CityCouncilman
+    Prefeitos,
   }
 }
 </script>
