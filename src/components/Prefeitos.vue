@@ -236,33 +236,43 @@ export default {
         this.$router.push({path:'/' + value.code });
         this.dadosUrna(this.$router.history.current.params.id);
       },
-      dadosUrna: function (codeDefault = null) {
+      // dadosUrna: function (codeDefault = null) {
+      dadosUrna: async function (codeDefault = null) {
         if(!codeDefault && this.$router.history.current.params.id) {
           codeDefault = this.$router.history.current.params.id;
         }
-        setTimeout(async () => {
+        // setTimeout(async () => {
           var vm = this;
           var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
-          axios
+           axios
           .get(url)
           .then(response => {
             var url2 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
-            axios
+          axios
             .get(url2)
             .then(response2 => {
+              console.log('foor');
               Array.from(response2.data['carg']['col']).forEach(function(value, key){
                 vm.dadosPrefeitos = [].concat(response.data['abr'][0]['cand'][key], value['par'][0]['cand']);
               });
+              console.log('eeach');
+
             })
             .catch(error => {
               console.log(error)
               this.errored = true
             })
-            .finally(() => this.loading = false);
+            .finally(() => {
+              console.log('final');
+              this.loading = false;
+            });
 
-console.log('======= oi ========');
+        // setTimeout(async () => {
+console.log('======= oi ======== 111');
+
 console.log(vm.dadosPrefeitos);
-console.log('======= oi ========');
+console.log('======= oi ======== 333');
+            // },2000);
 
             this.urnas = {
               barraAtual: "Brasil",
@@ -331,7 +341,7 @@ console.log('======= oi ========');
             this.errored = true
           })
           .finally(() => this.loading = false)
-        }, 1000)
+        // }, 1000)
       }
     },
   	mounted(){

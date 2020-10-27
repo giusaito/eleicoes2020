@@ -1,1 +1,112 @@
-{"ele":8707,"cdabr":"75230","nmabr":"CORBÉLIA","t":1,"f":"S","s":"N","dg":"13/10/2020","hg":"20:03:34","v":"005","br":{"nm":"Brasil","uf":[{"sg":"PR","nm":"PARANÁ","mun":[{"cd":"75230","nm":"CORBÉLIA","c":"N","s":50,"e":13875,"tzon":1,"zon":[{"cd":"0126","s":50,"e":13875}]}]}]},"carg":{"cd":11,"nmn":"Prefeito","nmm":"Prefeito","nmf":"Prefeita","nv":1,"col":[{"n":160000328618,"nm":"COLIGACAO 160000328618","tp":"P","com":"P16","par":[{"n":16,"sg":" P16 ","nm":"PARTIDO 16","cand":[{"sqcand":160002486655,"n":16,"nm":"CANDIDATO 16","nmu":"CANDIDATO 16","s":"M","dt":"17/03/1929","dvt":"Válido","vs":[{"sqcand":160002486656,"nm":"CANDIDATO 16 1","nmu":"CANDIDATO 16 1","tp":"V","sgp":"P16"}]}]}]},{"n":160000328579,"nm":"COLIGACAO 160000328579","tp":"P","com":"P14","par":[{"n":14,"sg":" P14 ","nm":"PARTIDO 14","cand":[{"sqcand":160002486454,"n":14,"nm":"CANDIDATO 14","nmu":"CANDIDATO 14","s":"M","dt":"05/12/1929","dvt":"Válido","vs":[{"sqcand":160002486455,"nm":"CANDIDATO 14 1","nmu":"CANDIDATO 14 1","tp":"V","sgp":"P14"}]}]}]}]}}
+{
+    "cdabr": "75230",
+    "f": "S",
+    "dg": "13/10/2020",
+    "v": "005",
+    "t": 1,
+    "nmabr": "CORB\u00c9LIA",
+    "ele": 8707,
+    "carg": {
+        "nmm": "Prefeito",
+        "nmn": "Prefeito",
+        "cd": 11,
+        "nmf": "Prefeita",
+        "nv": 1,
+        "col": [
+            {
+                "n": 160000328618,
+                "par": [
+                    {
+                        "n": 16,
+                        "sg": " P16 ",
+                        "cand": [
+                            {
+                                "vs": [
+                                    {
+                                        "nmu": "CANDIDATO 16 1",
+                                        "sgp": "P16",
+                                        "sqcand": 160002486656,
+                                        "tp": "V",
+                                        "nm": "CANDIDATO 16 1"
+                                    }
+                                ],
+                                "dt": "17/03/1929",
+                                "sqcand": 160002486655,
+                                "dvt": "V\u00e1lido",
+                                "nm": "CANDIDATO 16",
+                                "n": 16,
+                                "nmu": "CANDIDATO 16",
+                                "s": "M"
+                            }
+                        ],
+                        "nm": "PARTIDO 16"
+                    }
+                ],
+                "tp": "P",
+                "nm": "COLIGACAO 160000328618",
+                "com": "P16"
+            },
+            {
+                "n": 160000328579,
+                "par": [
+                    {
+                        "n": 14,
+                        "sg": " P14 ",
+                        "cand": [
+                            {
+                                "vs": [
+                                    {
+                                        "nmu": "CANDIDATO 14 1",
+                                        "sgp": "P14",
+                                        "sqcand": 160002486455,
+                                        "tp": "V",
+                                        "nm": "CANDIDATO 14 1"
+                                    }
+                                ],
+                                "dt": "05/12/1929",
+                                "sqcand": 160002486454,
+                                "dvt": "V\u00e1lido",
+                                "nm": "CANDIDATO 14",
+                                "n": 14,
+                                "nmu": "CANDIDATO 14",
+                                "s": "M"
+                            }
+                        ],
+                        "nm": "PARTIDO 14"
+                    }
+                ],
+                "tp": "P",
+                "nm": "COLIGACAO 160000328579",
+                "com": "P14"
+            }
+        ]
+    },
+    "br": {
+        "uf": [
+            {
+                "mun": [
+                    {
+                        "e": 13875,
+                        "c": "N",
+                        "nm": "CORB\u00c9LIA",
+                        "cd": "75230",
+                        "tzon": 1,
+                        "zon": [
+                            {
+                                "cd": "0126",
+                                "e": 13875,
+                                "s": 50
+                            }
+                        ],
+                        "s": 50
+                    }
+                ],
+                "sg": "PR",
+                "nm": "PARAN\u00c1"
+            }
+        ],
+        "nm": "Brasil"
+    },
+    "hg": "20:03:34",
+    "s": "N"
+}
