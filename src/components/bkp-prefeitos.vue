@@ -1,21 +1,21 @@
-<template>
- <!-- 
-  Projeto: eleicoes2020
-  Arquivo: Prefeitos.vue
-  ---------------------------------------------------------------------
-  Autor: Leonardo Nascimento
-  E-mail: leonardo.nascimento21@gmail.com
-  ---------------------------------------------------------------------
-  Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  27/10/2020 10:54:52 am
-  Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
-  ---------------------------------------------------------------------
-  Copyright (c) 2020 Leo
-  HISTORY:
-  Date      	By	Comments
-  ----------	---	---------------------------------------------------------
- -->
+/*
+ * Projeto: eleicoes2020
+ * Arquivo: bkp-prefeitos.vue
+ * ---------------------------------------------------------------------
+ * Autor: Leonardo Nascimento
+ * E-mail: leonardo.nascimento21@gmail.com
+ * ---------------------------------------------------------------------
+ * Data da criação: 27/10/2020 9:43:28 am
+ * Last Modified:  27/10/2020 9:43:33 am
+ * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
+ * ---------------------------------------------------------------------
+ * Copyright (c) 2020 Leo
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	---------------------------------------------------------
+ */
 
+<template>
   <div>
     <!-- 
       -- HEADER COM AS INFORMAÇÕES DA CIDADE (URNAS, SELECIONAR CIDADE ETC) --
@@ -96,7 +96,7 @@
         <h2 class="heading">PREFEITO</h2>
         <div id="presidente" class="lift-box">
           <div class="avatares clearfix">
-            <!-- ---{{ listaPrefeitos }}--- -->
+            ---{{ listaPrefeitos }}---
             <div class="avatar avatar-left" v-for="(mayor, index) in listaPrefeitos" :key="index">
               <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-if="index <= 1">
                 <span>
@@ -260,24 +260,36 @@ export default {
         }
         // setTimeout(async () => {
           var vm = this;
-          var url1 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
-          var url2 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
-          
-
-        const requestOne = axios.get(url1);
-        const requestTwo = axios.get(url2);
-
-        axios
-          .all([requestOne, requestTwo])
-          .then(
-            axios.spread((...responses) => {
-              const response = responses[0];
-              const response2 = responses[1];
-
-            Array.from(response2.data['carg']['col']).forEach(function(value, key){
+          var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
+           axios
+          .get(url)
+          .then(response => {
+            var url2 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
+          axios
+            .get(url2)
+            .then(response2 => {
+              console.log('foor');
+              Array.from(response2.data['carg']['col']).forEach(function(value, key){
                 vm.dadosPrefeitos = [].concat(response.data['abr'][0]['cand'][key], value['par'][0]['cand']);
               });
+              console.log('eeach');
 
+            })
+            .catch(error => {
+              console.log(error)
+              this.errored = true
+            })
+            .finally(() => {
+              console.log('final');
+              this.loading = false;
+            });
+
+        // setTimeout(async () => {
+console.log('======= oi ======== 111');
+
+console.log(vm.dadosPrefeitos);
+console.log('======= oi ======== 333');
+            // },2000);
 
             this.urnas = {
               barraAtual: "Brasil",
@@ -340,129 +352,13 @@ export default {
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.toString();
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.replace(".", ",");
             this.urnas.cVotosValidos = this.milhar(this.urnas.cVotosValidos);
-
-
-
-              // use/access the results
-              console.log(response, response2);
-            })
-          )
-          .catch(errors => {
-            // react on errors.
-            console.error(errors);
-          });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//            axios
-//           .get(url)
-//           .then(response => {
-//             var url22 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
-//           axios
-//             .get(url2)
-//             .then(response2 => {
-//               console.log('foor');
-//               Array.from(response2.data['carg']['col']).forEach(function(value, key){
-//                 vm.dadosPrefeitos = [].concat(response.data['abr'][0]['cand'][key], value['par'][0]['cand']);
-//               });
-//               console.log('eeach');
-
-//             })
-//             .catch(error => {
-//               console.log(error)
-//               this.errored = true
-//             })
-//             .finally(() => {
-//               console.log('final');
-//               this.loading = false;
-//             });
-
-//         // setTimeout(async () => {
-// console.log('======= oi ======== 111');
-
-// console.log(vm.dadosPrefeitos);
-// console.log('======= oi ======== 333');
-//             // },2000);
-
-//             this.urnas = {
-//               barraAtual: "Brasil",
-//               localAtual: this.cidadeSelecionada.label,
-//               totalDeUrnas: response.data['abr'][0]['s'],
-//               urnasApuradas: response.data['abr'][0]['st'],
-//               eleitoresTotal: response.data['abr'][0]['e'],
-//               eleitoresComparecimento: response.data['abr'][0]['c'],
-//               eleitoreAbstencao: response.data['abr'][0]['a'],
-//               // candidatos: response.data['abr'][0]['cand'],
-//               candidatos: this.dadosPrefeitos,
-//               // info geral da votação
-//               cVotosBrancos: response.data['vb'],
-//               cVotosNulos: response.data['vn'],
-//               cVotosValidos: response.data['vv'],
-//               eleitoresTotal: response.data['e'],
-//             }
-
-//             // DADOS DAS URNAS
-//             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
-//             if(isNaN(this.urnas.votantes)){
-//                 this.urnas.votantes = 0;
-//             }
-//             this.urnas.votantes = parseFloat(this.urnas.votantes.toFixed(2));
-//             this.urnas.votantesP = this.urnas.votantes.toString().split(",")[0];
-            
-//             this.urnas.ausentes = this.urnas.eleitoreAbstencao * 100 / this.urnas.eleitoresTotal;
-//             if(isNaN(this.urnas.ausentes)){
-//                 this.urnas.ausentes = 0;
-//             }
-//             this.urnas.ausentes = parseFloat(this.urnas.ausentes.toFixed(2)); 
-//             this.urnas.ausentesP = this.urnas.ausentes.toString().split(",")[0];
-
-//             this.urnas.apuradas = this.urnas.urnasApuradas * 100 / this.urnas.totalDeUrnas;
-//             this.urnas.apuradas = parseFloat(this.urnas.apuradas.toFixed(2));
-//             this.urnas.apuradas = this.urnas.apuradas.toString();
-//             this.urnas.apuradas = this.urnas.apuradas.replace(".", ",");
-
-//             this.urnas.eleitoresTotal = this.milhar(this.urnas.eleitoresTotal);
-//             this.urnas.tipo = 1;
-//             if(parseInt(this.urnas.urnasApuradas) === 0){
-//               this.urnas['naoIniciouApuracao'] = true;
-//             }
-
-//             // DADOS GERAIS (BRANCOS, NULOS, TOTAL ETC)
-//             this.urnas.pVotosBrancos = this.urnas.cVotosBrancos * 100 / this.urnas.eleitoresTotal;
-//             this.urnas.pVotosBrancos = parseFloat(this.urnas.pVotosBrancos.toFixed(2));
-//             this.urnas.pVotosBrancos = this.urnas.pVotosBrancos.toString();
-//             this.urnas.pVotosBrancos = this.urnas.pVotosBrancos.replace(".", ","); 
-//             this.urnas.cVotosBrancos = this.milhar(this.urnas.cVotosBrancos);
-
-//             this.urnas.pVotosNulos = this.urnas.cVotosNulos * 100 / this.urnas.eleitoresTotal;
-//             this.urnas.pVotosNulos = parseFloat(this.urnas.pVotosNulos.toFixed(2)); 
-//             this.urnas.pVotosNulos = this.urnas.pVotosNulos.toString();
-//             this.urnas.pVotosNulos = this.urnas.pVotosNulos.replace(".", ",");
-//             this.urnas.cVotosNulos = this.milhar(this.urnas.cVotosNulos);
-            
-//             this.urnas.pVotosValidos = this.urnas.cVotosValidos * 100 / this.urnas.eleitoresTotal;
-//             this.urnas.pVotosValidos = parseFloat(this.urnas.pVotosValidos.toFixed(2)); 
-//             this.urnas.pVotosValidos = this.urnas.pVotosValidos.toString();
-//             this.urnas.pVotosValidos = this.urnas.pVotosValidos.replace(".", ",");
-//             this.urnas.cVotosValidos = this.milhar(this.urnas.cVotosValidos);
-//           })
-//           .catch(error => {
-//             console.log(error)
-//             this.errored = true
-//           })
-//           .finally(() => this.loading = false)
-//         // }, 1000)
+          })
+          .catch(error => {
+            console.log(error)
+            this.errored = true
+          })
+          .finally(() => this.loading = false)
+        // }, 1000)
       }
     },
   	mounted(){
