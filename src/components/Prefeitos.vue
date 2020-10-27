@@ -236,14 +236,14 @@ export default {
         this.$router.push({path:'/' + value.code });
         this.dadosUrna(this.$router.history.current.params.id);
       },
-      dadosUrna: function (codeDefault = null) {
+      dadosUrna: async function (codeDefault = null) {
         if(!codeDefault && this.$router.history.current.params.id) {
           codeDefault = this.$router.history.current.params.id;
         }
         setTimeout(async () => {
           var vm = this;
           var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
-          axios
+          await axios
           .get(url)
           .then(response => {
             var url2 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
