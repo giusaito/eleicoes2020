@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  27/10/2020 10:54:52 am
+  Last Modified:  28/10/2020 10:18:58 am
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -17,6 +17,8 @@
  -->
 
   <div>
+
+    <div v-bind:class="{loader: !finishLoadData}"></div>
     <!-- 
       -- HEADER COM AS INFORMAÇÕES DA CIDADE (URNAS, SELECIONAR CIDADE ETC) --
     -->
@@ -93,29 +95,30 @@
       -->
       <hr><br><br>
       <div class="city-mayor fullheight">
-        <h2 class="heading">PREFEITO</h2>
+        <h2 class="heading" v-bind:class="{uniqueCandidate: UniqueMayor}">PREFEITO</h2>
         <div id="presidente" class="lift-box">
           <div class="avatares clearfix">
             <!-- ---{{ listaPrefeitos }}--- -->
             <div class="avatar avatar-left" v-for="(mayor, index) in listaPrefeitos" :key="index">
-              <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-if="index <= 1">
+              <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-bind:class="{uniqueMayorCss: UniqueMayor}" v-if="index <= 1">
                 <span>
                   <span class="candidate-mask">
                     <!-- <img class="candidate-image" :src="`/static/fotos/${mayor.sqcand}.jpg`" :title="mayor.nm" :alt="mayor.nm"> -->
                     <img class="candidate-image" :src="`http://divulgacandcontas.tse.jus.br/candidaturas/oficial/2020/PR/75230/426/candidatos/665468/foto.jpeg`" :title="mayor.nm" :alt="mayor.nm">
                   </span>
+                  <span class="candidate-status situation-1" v-if="mayor.e == 's'">eleito</span>
                 </span>
                 <div class="gauge">
                   <canvas class="candidate-canvas" width="110" height="110"></canvas>
                 </div>
                 <span class="info-candidate">
                   <span class="candidate-votes">
-                    {{mayor.v | votePercentage}}
+                    {{mayor.vap | votePercentage}}
                     <span class="percent">%</span>
                   </span>
                     <span class="candidate-name">{{mayor.nm}}</span>
-                    <span class="candidate-party situation-1">{{mayor.cc}}</span>
-                    <span class="candidate-total-votes">{{mayor.v | voteTotal}}
+                    <span class="candidate-party situation-1">{{mayor.cc | politicalParty}}</span>
+                    <span class="candidate-total-votes">{{mayor.vap | voteTotal}}
                     <span class="candidate-total-votes-label">votos</span>
                   </span>
               </span>
@@ -139,11 +142,11 @@
                     </li>
                     <li class="item-small-set">
                       <ul>
-                        <li class="item-party"> {{mayor.cc}} </li>
-                        <li class="item-votes-v"> {{mayor.v | voteTotal}} </li>
+                        <li class="item-party"> {{mayor.cc | politicalParty}} </li>
+                        <li class="item-votes-v"> {{mayor.vap | voteTotal}} </li>
                       </ul>
                     </li>
-                    <li class="item-votes-vp">{{mayor.v | votePercentage}}<span>%</span></li>
+                    <li class="item-votes-vp">{{mayor.vap | votePercentage}}<span>%</span></li>
                     <li class="item-notification elected-0"></li>
                   </ul>
                 </li>
@@ -176,6 +179,8 @@ export default {
       return {
         urnas: [],
         dadosPrefeitos: [],
+        UniqueMayor: false,
+        finishLoadData: false,
         cidadeSelecionada: 
         {
           label:"Cascavel",
@@ -191,6 +196,8 @@ export default {
     filters: {
       votePercentage: function (value) {
         if (value > 0){
+          // console.log('vallor');
+          // console.log('vallor');
           var percentage;
           percentage = value * 100 / 107050530;
         percentage = parseFloat(percentage.toFixed(2));
@@ -260,41 +267,51 @@ export default {
         }
         // setTimeout(async () => {
           var vm = this;
-          var url1 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
-          var url2 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
+          // var urlPrefV = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
+          var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
           
 
-        const requestOne = axios.get(url1);
-        const requestTwo = axios.get(url2);
-
+        // const requestPrefV = axios.get(urlPrefV);
+        const requestPrefeito = axios.get(url);
+        this.finishLoadData = false;
         axios
-          .all([requestOne, requestTwo])
+          .all([requestPrefeito])
           .then(
             axios.spread((...responses) => {
-              const response = responses[0];
-              const response2 = responses[1];
+              const responsePrefV = responses[0];
+            
+            // Array.from(responsePrefFixo.data['carg']['col']).forEach(function(value, key){
+            //     vm.dadosPrefeitos = [].concat(responsePrefV.data[0]['cand'][key], value['par'][0]['cand']);
 
-            Array.from(response2.data['carg']['col']).forEach(function(value, key){
-                vm.dadosPrefeitos = [].concat(response.data['abr'][0]['cand'][key], value['par'][0]['cand']);
-              });
+            //   });
 
+            
+
+                // console.log('oref');
+                // console.log(responsePrefV.data['abr'][0]);
+                // console.log('oref');
 
             this.urnas = {
               barraAtual: "Brasil",
               localAtual: this.cidadeSelecionada.label,
-              totalDeUrnas: response.data['abr'][0]['s'],
-              urnasApuradas: response.data['abr'][0]['st'],
-              eleitoresTotal: response.data['abr'][0]['e'],
-              eleitoresComparecimento: response.data['abr'][0]['c'],
-              eleitoreAbstencao: response.data['abr'][0]['a'],
-              // candidatos: response.data['abr'][0]['cand'],
-              candidatos: this.dadosPrefeitos,
+              totalDeUrnas: responsePrefV.data['s'],
+              urnasApuradas: responsePrefV.data['st'],
+              eleitoresTotal: responsePrefV.data['e'],
+              eleitoresComparecimento: responsePrefV.data['c'],
+              eleitoreAbstencao: responsePrefV.data['a'],
+              candidatos: responsePrefV.data['cand'],
+              // candidatos: this.dadosPrefeitos,
               // info geral da votação
-              cVotosBrancos: response.data['vb'],
-              cVotosNulos: response.data['vn'],
-              cVotosValidos: response.data['vv'],
-              eleitoresTotal: response.data['e'],
+              cVotosBrancos: responsePrefV.data['vb'],
+              cVotosNulos: responsePrefV.data['vn'],
+              cVotosValidos: responsePrefV.data['vv'],
+              eleitoresTotal: responsePrefV.data['e'],
             }
+            this.UniqueMayor = responsePrefV.data['cand'].length < 2 ? true : false;
+
+            console.log("========");
+            console.log(this.UniqueMayor);
+            console.log("========");
 
             // DADOS DAS URNAS
             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
@@ -344,11 +361,12 @@ export default {
 
 
               // use/access the results
-              console.log(response, response2);
             })
-          )
+          ).finally(() => {
+              this.finishLoadData = true;
+            })
           .catch(errors => {
-            // react on errors.
+           this.finishLoadData = true;
             console.error(errors);
           });
 
@@ -466,19 +484,29 @@ export default {
       }
     },
   	mounted(){
+        // Senão existir parâmetro na url pega a cidade Padrão Cascavel 
+
+        // Descomentar para funfar
+      // if(this.$router.history.current.params.id == 'undefined'){
+      //   this.cidadeSelecionada.code = "74934";
+      // } else {
+      //   this.cidadeSelecionada.code = this.$router.history.current.params.id;
+
+      // }
+
       this.listarCidades();
 
       this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
         this.dadosUrna(this.$router.history.current.params.id);
-      }, 10000)
+      }, 60000)
   	},
   	computed: {
       listaPrefeitos: function() {
         if(typeof this.urnas.candidatos !== 'undefined'){
           function compare(a, b) {
             if (Number(a.v) > Number(b.v))
-              return -1;
+              console.log('v'+ v);
             if (Number(a.v) < Number(b.v))
               return 1;
               return 0;
@@ -496,4 +524,23 @@ export default {
   .vs--searchable .vs__dropdown-toggle {
     background:#fff;
   }
+ 
+ @media(min-width: 1200px){
+  .uniqueMayorCss {
+    width: 100%;
+  }
+  .city-mayor .uniqueCandidate {
+    margin-top: -5%;
+  }
+}
+
+.loader {
+    position: fixed;
+    left: 80%;
+    top: 7px;
+    width: 5%;
+    height: 7%;
+    z-index: 9999;
+    background: url(//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif) 50% 50% no-repeat rgb(249,249,249);
+}
 </style>

@@ -37,28 +37,15 @@
         {
             "st": "",
             "pvap": "  27,07",
-            "e": "n",
+            "e": "s",
             "sqcand": 160002486454,
             "dvt": "V\u00e1lido",
-            "nm": "CANDIDATO 14",
+            "nm": "Dr. Giovani",
             "vap": 3199,
             "n": 14,
-            "nv": "CANDIDATO 14 1",
+            "nv": "Dr. Giovani",
             "seq": 1,
             "cc": "P14"
-        },
-        {
-            "st": "",
-            "pvap": "  17,89",
-            "e": "n",
-            "sqcand": 160002486655,
-            "dvt": "V\u00e1lido",
-            "nm": "CANDIDATO 16",
-            "vap": 2114,
-            "n": 16,
-            "nv": "CANDIDATO 16 1",
-            "seq": 2,
-            "cc": "P16"
         }
     ],
     "f": "s",
