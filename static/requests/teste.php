@@ -7,7 +7,7 @@
  * E-mail: leonardo.nascimento21@gmail.com
  * ---------------------------------------------------------------------
  * Data da criação: 28/10/2020 3:44:04 pm
- * Last Modified:  28/10/2020 5:44:58 pm
+ * Last Modified:  29/10/2020 1:39:57 pm
  * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
  * ---------------------------------------------------------------------
  * Copyright (c) 2020 Leo
@@ -15,7 +15,7 @@
  * Date      	By	Comments
  * ----------	---	---------------------------------------------------------
  */
-
+ 
  sleep(1);
  
     $rand = rand(10, 15);
