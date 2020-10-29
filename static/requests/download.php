@@ -7,7 +7,7 @@
  * E-mail: leonardo.nascimento21@gmail.com
  * ---------------------------------------------------------------------
  * Data da criação: 26/10/2020 2:34:01 pm
- * Last Modified:  27/10/2020 3:55:39 pm
+ * Last Modified:  28/10/2020 3:54:24 pm
  * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
  * ---------------------------------------------------------------------
  * Copyright (c) 2020 Leo
@@ -79,7 +79,7 @@ $n = 0;
 for ($l=1; $l < $countCity; $l++) {
     for ($m=0; $m < count($code); $m++) { 
         $url = "http://dev.cgn.inf.br/json/ele2020/divulgacao/simulado/8707/dados/pr/pr".$cidades[$l]."-c0013-e008707-".$code[$m].".json";
-
+        $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         // curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json');
@@ -108,7 +108,6 @@ for ($l=1; $l < $countCity; $l++) {
             
         // echo $filename . "<br><br>";
         curl_close($ch);
-        $ch = curl_init();
     }
    
     if($n > 60) {
