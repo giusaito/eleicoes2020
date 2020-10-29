@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  28/10/2020 5:34:03 pm
+  Last Modified:  29/10/2020 4:09:30 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -201,7 +201,7 @@ export default {
           // console.log('vallor');
           // console.log('vallor');
           var percentage;
-          percentage = value * 100 / 107050530;
+          percentage = value * 100 / 23081;
         percentage = parseFloat(percentage.toFixed(2));
         percentage = percentage.toString();
         percentage = percentage.replace(".", ",");
@@ -312,7 +312,7 @@ export default {
               cVotosBrancos: responsePrefV.data['vb'],
               cVotosNulos: responsePrefV.data['vn'],
               cVotosValidos: responsePrefV.data['vv'],
-              eleitoresTotal: responsePrefV.data['e'],
+              // eleitoresTotal: responsePrefV.data['e'],
             }
             this.UniqueMayor = responsePrefV.data['cand'].length < 2 ? true : false;
 
@@ -340,7 +340,7 @@ export default {
             this.urnas.apuradas = this.urnas.apuradas.toString();
             this.urnas.apuradas = this.urnas.apuradas.replace(".", ",");
 
-            this.urnas.eleitoresTotal = this.milhar(this.urnas.eleitoresTotal);
+            // this.urnas.eleitoresTotal = this.milhar(this.urnas.eleitoresTotal);
             this.urnas.tipo = 1;
             if(parseInt(this.urnas.urnasApuradas) === 0){
               this.urnas['naoIniciouApuracao'] = true;
@@ -359,11 +359,16 @@ export default {
             this.urnas.pVotosNulos = this.urnas.pVotosNulos.replace(".", ",");
             this.urnas.cVotosNulos = this.milhar(this.urnas.cVotosNulos);
             
-            this.urnas.pVotosValidos = this.urnas.cVotosValidos * 100 / this.urnas.eleitoresTotal;
+            this.urnas.pVotosValidos = parseFloat(this.urnas.cVotosValidos) * 100 / parseFloat(this.urnas.eleitoresTotal);
+            // alert(this.urnas.eleitoresTotal);
             this.urnas.pVotosValidos = parseFloat(this.urnas.pVotosValidos.toFixed(2)); 
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.toString();
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.replace(".", ",");
             this.urnas.cVotosValidos = this.milhar(this.urnas.cVotosValidos);
+
+            
+            console.log('vt valido')
+            console.log(typeof this.urnas.eleitoresTotal);
 
 
 
@@ -507,7 +512,7 @@ export default {
       this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
         this.dadosUrna(this.$router.history.current.params.id);
-      }, 5000)
+      }, 60000)
 
       
 
