@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  28/10/2020 10:18:58 am
+  Last Modified:  28/10/2020 5:34:03 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -18,7 +18,8 @@
 
   <div>
 
-    <div v-bind:class="{loader: !finishLoadData}"></div>
+    <div v-bind:class="{siteload: !finishLoadSite}"></div>
+    <div v-bind:class="{loader: finishLoadData}"></div>
     <!-- 
       -- HEADER COM AS INFORMAÇÕES DA CIDADE (URNAS, SELECIONAR CIDADE ETC) --
     -->
@@ -104,7 +105,7 @@
                 <span>
                   <span class="candidate-mask">
                     <!-- <img class="candidate-image" :src="`/static/fotos/${mayor.sqcand}.jpg`" :title="mayor.nm" :alt="mayor.nm"> -->
-                    <img class="candidate-image" :src="`http://divulgacandcontas.tse.jus.br/candidaturas/oficial/2020/PR/75230/426/candidatos/665468/foto.jpeg`" :title="mayor.nm" :alt="mayor.nm">
+                    <img class="candidate-image" :src="`https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/fotos/rr/230000001938.jpeg`" :title="mayor.nm" :alt="mayor.nm">
                   </span>
                   <span class="candidate-status situation-1" v-if="mayor.e == 's'">eleito</span>
                 </span>
@@ -181,6 +182,7 @@ export default {
         dadosPrefeitos: [],
         UniqueMayor: false,
         finishLoadData: false,
+        finishLoadSite: false,
         cidadeSelecionada: 
         {
           label:"Cascavel",
@@ -267,13 +269,18 @@ export default {
         }
         // setTimeout(async () => {
           var vm = this;
-          // var urlPrefV = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-v.json';
-          var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
+
+        // Url de teste
+        // var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
+          
+          
+          var url = 'static/requests/eleicoes/ro00396-c0013-e008334-r.json';
           
 
         // const requestPrefV = axios.get(urlPrefV);
         const requestPrefeito = axios.get(url);
-        this.finishLoadData = false;
+        this.finishLoadData = true;
+        this.finishLoadSite = false;
         axios
           .all([requestPrefeito])
           .then(
@@ -309,9 +316,9 @@ export default {
             }
             this.UniqueMayor = responsePrefV.data['cand'].length < 2 ? true : false;
 
-            console.log("========");
-            console.log(this.UniqueMayor);
-            console.log("========");
+            // console.log("========");
+            // console.log(this.UniqueMayor);
+            // console.log("========");
 
             // DADOS DAS URNAS
             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
@@ -363,10 +370,11 @@ export default {
               // use/access the results
             })
           ).finally(() => {
-              this.finishLoadData = true;
+              this.finishLoadData = false;
+              this.finishLoadSite = true;
             })
           .catch(errors => {
-           this.finishLoadData = true;
+           this.finishLoadData = false;
             console.error(errors);
           });
 
@@ -499,21 +507,35 @@ export default {
       this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
         this.dadosUrna(this.$router.history.current.params.id);
-      }, 60000)
+      }, 5000)
+
+      
+
+        // setTimeout(function(){ 
+        //     console.log('timeout 1');
+
+            this.finishLoadSite = true;
+        //     console.log('timeout');
+        //  }, 4000);
+
   	},
   	computed: {
       listaPrefeitos: function() {
         if(typeof this.urnas.candidatos !== 'undefined'){
           function compare(a, b) {
-            if (Number(a.v) > Number(b.v))
-              console.log('v'+ v);
-            if (Number(a.v) < Number(b.v))
-              return 1;
+            if(a.e == "s"){
+              return -1;
+            }
+            if(b.e == "s"){
               return 0;
+            }
+            if (Number(a.vap) > Number(b.vap)) {
+              return -1;
+            }
+            if (Number(a.vap) < Number(b.vap)){
+              return 0;
+              }
           }
-          console.log('-----');
-          console.log(this.urnas.candidatos);
-          console.log('-----');
           return this.urnas.candidatos.sort(compare);
         }
       }
@@ -537,10 +559,22 @@ export default {
 .loader {
     position: fixed;
     left: 80%;
-    top: 7px;
-    width: 5%;
-    height: 7%;
+    top: 0px;
+    width: 6%;
+    height: 6%;
     z-index: 9999;
     background: url(//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif) 50% 50% no-repeat rgb(249,249,249);
 }
+
+.siteload{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('https://i.imgur.com/2xTRzO7.jpg') 
+              50% 50% no-repeat rgb(249,249,249);
+}
+
 </style>
