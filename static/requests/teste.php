@@ -7,7 +7,7 @@
  * E-mail: leonardo.nascimento21@gmail.com
  * ---------------------------------------------------------------------
  * Data da criação: 28/10/2020 3:44:04 pm
- * Last Modified:  29/10/2020 4:30:38 pm
+ * Last Modified:  29/10/2020 5:09:40 pm
  * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
  * ---------------------------------------------------------------------
  * Copyright (c) 2020 Leo
@@ -22,13 +22,13 @@
 
         if($rand == 10 || $rand == 12){
             $rand = 11;
-            $url = "https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/dados-simplificados/ro/ro00396-c00". $rand ."-e008334-r.json";
+            $url = "https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/dados-simplificados/ms/ms90514-c00". $rand ."-e008334-r.json";
         }elseif($rand == 14 || $rand == 15){
             $rand = 13;
-            $url = "https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/dados-simplificados/ro/ro00396-c00". $rand ."-e008334-r.json";
+            $url = "https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/dados-simplificados/ms/ms90514-c00". $rand ."-e008334-r.json";
         }
         else {
-            $url = "https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/dados-simplificados/ro/ro00396-c00". $rand ."-e008334-r.json";
+            $url = "https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/dados-simplificados/ms/ms90514-c00". $rand ."-e008334-r.json";
         }
 
         echo $rand;

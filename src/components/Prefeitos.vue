@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  29/10/2020 4:09:30 pm
+  Last Modified:  29/10/2020 5:51:28 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -114,7 +114,7 @@
                 </div>
                 <span class="info-candidate">
                   <span class="candidate-votes">
-                    {{mayor.vap | votePercentage}}
+                    {{mayor.vap | votePercentage()}}
                     <span class="percent">%</span>
                   </span>
                     <span class="candidate-name">{{mayor.nm}}</span>
@@ -201,7 +201,7 @@ export default {
           // console.log('vallor');
           // console.log('vallor');
           var percentage;
-          percentage = value * 100 / 23081;
+          percentage = value * 100 / 591310;
         percentage = parseFloat(percentage.toFixed(2));
         percentage = percentage.toString();
         percentage = percentage.replace(".", ",");
@@ -500,17 +500,19 @@ export default {
         // Senão existir parâmetro na url pega a cidade Padrão Cascavel 
 
         // Descomentar para funfar
-      // if(this.$router.history.current.params.id == 'undefined'){
-      //   this.cidadeSelecionada.code = "74934";
-      // } else {
-      //   this.cidadeSelecionada.code = this.$router.history.current.params.id;
+      var selectCode = 74934;
+      if(this.$router.history.current.params.id == 'undefined'){
+        this.cidadeSelecionada.code = "74934";
+      } else {
+        this.cidadeSelecionada.code = selectCode;
 
-      // }
+      }
 
       this.listarCidades();
 
       this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
+        this.$root.$emit('cidadeSelecionada', this.cidadeSelecionada.code);
         this.dadosUrna(this.$router.history.current.params.id);
       }, 60000)
 
@@ -522,6 +524,11 @@ export default {
             this.finishLoadSite = true;
         //     console.log('timeout');
         //  }, 4000);
+
+
+
+
+        
 
   	},
   	computed: {

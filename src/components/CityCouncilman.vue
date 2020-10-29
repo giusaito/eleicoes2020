@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 19/10/2020 1:57:48 pm
-  Last Modified:  29/10/2020 4:04:59 pm
+  Last Modified:  29/10/2020 5:51:23 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -121,7 +121,7 @@ export default {
 		votePercentage: function (value) {
 			if (value > 0){
 				var percentage;
-				percentage = value * 100 / 107050530;
+				percentage = value * 100 / 591310;
 				percentage = parseFloat(percentage.toFixed(2));
 				percentage = percentage.toString();
 				percentage = percentage.replace(".", ",");
@@ -342,6 +342,15 @@ export default {
 		setInterval(async () => {
 			this.listarVereadores();
 		}, 10000)
+
+
+		this.$root.$on('cidadeSelecionada', (event) => {
+			      console.log('id active');
+			      console.log(event);
+
+
+			});
+			
 	},
 	computed: {
 		rListarVereadores: function() {
