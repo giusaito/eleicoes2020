@@ -1,3 +1,21 @@
+/**
+ * Projeto: eleicoes2020
+ * Arquivo: main.js
+ * ---------------------------------------------------------------------
+ * Autor: Leonardo Nascimento
+ * E-mail: leonardo.nascimento21@gmail.com
+ * ---------------------------------------------------------------------
+ * Data da criação: 19/10/2020 1:57:48 pm
+ * Last Modified:  30/10/2020 10:22:07 am
+ * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
+ * ---------------------------------------------------------------------
+ * Copyright (c) 2020 Leo
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	---------------------------------------------------------
+ */
+
+
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'

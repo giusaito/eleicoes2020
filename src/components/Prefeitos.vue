@@ -7,17 +7,8 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Last Modified:  30/10/2020 2:55:13 pm
-  Modified By: Giuliano Saito - <giulianosaito@gmail.com> / MAC OS
-=======
-  Last Modified:  30/10/2020 2:55:13 pm
-=======
-  Last Modified:  30/10/2020 2:55:13 pm
->>>>>>> 4fca48501e5040d7c83735281246d5d86abd605a
-  Modified By: Giuliano Saito - <giulianosaito@gmail.com> / MAC OS
->>>>>>> 282ebd0e075bd939ff947b15d8d3a369c3abfaae
+  Last Modified:  30/10/2020 3:40:09 pm
+  Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
   HISTORY:
@@ -119,12 +110,11 @@
                   <span class="candidate-status situation-1" v-if="mayor.e == 's'">eleito</span>
                 </span>
                 <div class="gauge">
-                  <!-- <canvas class="candidate-canvas" width="110" height="110"></canvas> -->
-                  <div is="stat-circle" percentage="70"></div>
+                  <canvas class="candidate-canvas" width="110" height="110"></canvas>
                 </div>
                 <span class="info-candidate">
                   <span class="candidate-votes">
-                    {{mayor.vap | votePercentage()}}
+                    {{mayor.vap | votePercentage(urnas.eleitoresTotal)}}
                     <span class="percent">%</span>
                   </span>
                     <span class="candidate-name">{{mayor.nm}}</span>
@@ -136,6 +126,7 @@
                 <div class="share">
                   <i class="icon icon-facebook" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_destaque_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Prefeito: `${$mayor.nm}`" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/"></i>
                   <i class="icon icon-twitter" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_destaque_twitter" data-title="Apuração - Prefeito: `${$mayor.nm}`" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/"></i>
+                  <i class="icon icon-whatsapp" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_destaque_whatsapp" data-title="Apuração - Prefeito: `${$mayor.nm}`" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/"></i>
                 </div>
               </div>
             </div>
@@ -150,6 +141,7 @@
                     <li class="item-social">
                       <span class="icon-facebook" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Presidente: CIRO GOMES" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/br"></span>
                       <span class="icon-twitter" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Presidente: CIRO GOMES" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/br"></span>
+                      <span class="icon-facebook" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_whatsapp" data-title="Apuração - Presidente: CIRO GOMES" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/br"></span>
                     </li>
                     <li class="item-small-set">
                       <ul>
@@ -157,7 +149,7 @@
                         <li class="item-votes-v"> {{mayor.vap | voteTotal}} </li>
                       </ul>
                     </li>
-                    <li class="item-votes-vp">{{mayor.vap | votePercentage}}<span>%</span></li>
+                    <li class="item-votes-vp">{{mayor.vap | votePercentage(urnas.eleitoresTotal)}}<span>%</span></li>
                     <li class="item-notification elected-0"></li>
                   </ul>
                 </li>
@@ -180,10 +172,10 @@
     </div>
   </div>
 </template>
+
 <script>
 import CityMayor from './CityMayor'
 import CityCouncilman from './CityCouncilman'
-import CircularPorcentagem from './CircularPorcentagem'
 export default {
     name: 'Prefeitos',
     data () {
@@ -196,7 +188,7 @@ export default {
         cidadeSelecionada: 
         {
           label:"Cascavel",
-          code:"74934"
+          code: "74934",
         },
         cidades: []
       }
@@ -206,16 +198,14 @@ export default {
       CityCouncilman
     },
     filters: {
-      votePercentage: function (value) {
+      votePercentage: function (value, eleitoresTotal) {
         if (value > 0){
-          // console.log('vallor');
-          // console.log('vallor');
           var percentage;
-          percentage = value * 100 / 591310;
-        percentage = parseFloat(percentage.toFixed(2));
-        percentage = percentage.toString();
-        percentage = percentage.replace(".", ",");
-        return percentage;
+          percentage = value * 100 / eleitoresTotal;
+          percentage = parseFloat(percentage.toFixed(2));
+          percentage = percentage.toString();
+          percentage = percentage.replace(".", ",");
+          return percentage;
       } else {
         return 0;
       }
@@ -277,17 +267,10 @@ export default {
         if(!codeDefault && this.$router.history.current.params.id) {
           codeDefault = this.$router.history.current.params.id;
         }
-        // setTimeout(async () => {
-          var vm = this;
 
+        var vm = this;
         // Url de teste
-        // var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
-          
-          
-          var url = 'static/requests/eleicoes/ro00396-c0013-e008334-r.json';
-          
-
-        // const requestPrefV = axios.get(urlPrefV);
+        var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
         const requestPrefeito = axios.get(url);
         this.finishLoadData = true;
         this.finishLoadSite = false;
@@ -296,17 +279,6 @@ export default {
           .then(
             axios.spread((...responses) => {
               const responsePrefV = responses[0];
-            
-            // Array.from(responsePrefFixo.data['carg']['col']).forEach(function(value, key){
-            //     vm.dadosPrefeitos = [].concat(responsePrefV.data[0]['cand'][key], value['par'][0]['cand']);
-
-            //   });
-
-            
-
-                // console.log('oref');
-                // console.log(responsePrefV.data['abr'][0]);
-                // console.log('oref');
 
             this.urnas = {
               barraAtual: "Brasil",
@@ -317,18 +289,12 @@ export default {
               eleitoresComparecimento: responsePrefV.data['c'],
               eleitoreAbstencao: responsePrefV.data['a'],
               candidatos: responsePrefV.data['cand'],
-              // candidatos: this.dadosPrefeitos,
-              // info geral da votação
+                // info geral da votação
               cVotosBrancos: responsePrefV.data['vb'],
               cVotosNulos: responsePrefV.data['vn'],
               cVotosValidos: responsePrefV.data['vv'],
-              // eleitoresTotal: responsePrefV.data['e'],
             }
             this.UniqueMayor = responsePrefV.data['cand'].length < 2 ? true : false;
-
-            // console.log("========");
-            // console.log(this.UniqueMayor);
-            // console.log("========");
 
             // DADOS DAS URNAS
             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
@@ -370,19 +336,11 @@ export default {
             this.urnas.cVotosNulos = this.milhar(this.urnas.cVotosNulos);
             
             this.urnas.pVotosValidos = parseFloat(this.urnas.cVotosValidos) * 100 / parseFloat(this.urnas.eleitoresTotal);
-            // alert(this.urnas.eleitoresTotal);
             this.urnas.pVotosValidos = parseFloat(this.urnas.pVotosValidos.toFixed(2)); 
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.toString();
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.replace(".", ",");
             this.urnas.cVotosValidos = this.milhar(this.urnas.cVotosValidos);
 
-            
-            console.log('vt valido')
-            console.log(typeof this.urnas.eleitoresTotal);
-
-
-
-              // use/access the results
             })
           ).finally(() => {
               this.finishLoadData = false;
@@ -395,25 +353,27 @@ export default {
       }
     },
   	mounted(){
-      // Senão existir parâmetro na url pega a cidade Padrão Cascavel 
-      // Descomentar para funfar
+        // Senão existir parâmetro na url pega a cidade Padrão Cascavel 
+
+        // Descomentar para funfar
       var selectCode = 74934;
-      if(this.$router.history.current.params.id == 'undefined'){
+      if(this.$router.history.current.params.id == undefined){
         this.cidadeSelecionada.code = "74934";
       } else {
-        this.cidadeSelecionada.code = selectCode;
-
+        this.cidadeSelecionada.code = this.$router.history.current.params.id;
       }
 
       this.listarCidades();
-
+    
       this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
+        document.title = "CGN - Atualizando...";
         this.$root.$emit('cidadeSelecionada', this.cidadeSelecionada.code);
         this.dadosUrna(this.$router.history.current.params.id);
-      }, 60000);
-      this.finishLoadSite = true;
-      
+        document.title = "CGN Eleições 2020: Apuração de votos, resultado, candidatos eleitos";
+      }, 10000)
+
+        this.finishLoadSite = true;
   	},
   	computed: {
       listaPrefeitos: function() {
@@ -473,25 +433,4 @@ export default {
               50% 50% no-repeat rgb(249,249,249);
 }
 
-.stat-circle {
-  width: 75px;
-}
-.stat-circle circle.bg {
-  fill: none;
-  stroke: #f1f1f1;
-  stroke-width: 0.4;
-}
-.stat-circle circle.progress {
-  fill: none;
-  stroke: #ff3a42;
-  stroke-width: 0.8;
-  stroke-dasharray: 51 51;
-  stroke-dashoffset: -51;
-  stroke-linecap: round;
-}
-.stat-circle text {
-  font-size: 5px;
-  text-anchor: middle;
-  fill: #bbb;
-}
 </style>
