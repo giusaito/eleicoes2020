@@ -114,7 +114,7 @@
                 </div>
                 <span class="info-candidate">
                   <span class="candidate-votes">
-                    {{mayor.vap | votePercentage()}}
+                    {{mayor.vap | votePercentage(urnas.eleitoresTotal)}}
                     <span class="percent">%</span>
                   </span>
                     <span class="candidate-name">{{mayor.nm}}</span>
@@ -149,7 +149,7 @@
                         <li class="item-votes-v"> {{mayor.vap | voteTotal}} </li>
                       </ul>
                     </li>
-                    <li class="item-votes-vp">{{mayor.vap | votePercentage}}<span>%</span></li>
+                    <li class="item-votes-vp">{{mayor.vap | votePercentage(urnas.eleitoresTotal)}}<span>%</span></li>
                     <li class="item-notification elected-0"></li>
                   </ul>
                 </li>
@@ -198,10 +198,10 @@ export default {
       CityCouncilman
     },
     filters: {
-      votePercentage: function (value) {
+      votePercentage: function (value, eleitoresTotal) {
         if (value > 0){
           var percentage;
-          percentage = value * 100 / 591310;
+          percentage = value * 100 / eleitoresTotal;
           percentage = parseFloat(percentage.toFixed(2));
           percentage = percentage.toString();
           percentage = percentage.replace(".", ",");
