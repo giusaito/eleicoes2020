@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  30/10/2020 3:35:58 pm
+  Last Modified:  30/10/2020 3:37:59 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -361,7 +361,6 @@ export default {
       var selectCode = 74934;
       if(this.$router.history.current.params.id == undefined){
         this.cidadeSelecionada.code = "74934";
-        alert('undef');
       } else {
         this.cidadeSelecionada.code = this.$router.history.current.params.id;
       }
