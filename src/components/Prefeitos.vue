@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  30/10/2020 3:37:59 pm
+  Last Modified:  30/10/2020 3:40:09 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -200,14 +200,12 @@ export default {
     filters: {
       votePercentage: function (value) {
         if (value > 0){
-          // console.log('vallor');
-          // console.log('vallor');
           var percentage;
           percentage = value * 100 / 591310;
-        percentage = parseFloat(percentage.toFixed(2));
-        percentage = percentage.toString();
-        percentage = percentage.replace(".", ",");
-        return percentage;
+          percentage = parseFloat(percentage.toFixed(2));
+          percentage = percentage.toString();
+          percentage = percentage.replace(".", ",");
+          return percentage;
       } else {
         return 0;
       }
