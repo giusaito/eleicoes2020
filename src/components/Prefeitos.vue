@@ -18,7 +18,7 @@
 
   <div>
 
-    <div v-bind:class="{siteload: !finishLoadSite}"></div>
+    <!-- <div v-bind:class="{siteload: !finishLoadSite}"></div> -->
     <div v-bind:class="{loader: finishLoadData}"></div>
     <!-- 
       -- HEADER COM AS INFORMAÇÕES DA CIDADE (URNAS, SELECIONAR CIDADE ETC) --
