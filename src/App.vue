@@ -1,5 +1,22 @@
 <template>
+ <!-- 
+  Projeto: eleicoes2020
+  Arquivo: App.vue
+  ---------------------------------------------------------------------
+  Autor: Leonardo Nascimento
+  E-mail: leonardo.nascimento21@gmail.com
+  ---------------------------------------------------------------------
+  Data da criação: 20/10/2020 10:20:51 am
+  Last Modified:  30/10/2020 11:21:58 am
+  Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
+  ---------------------------------------------------------------------
+  Copyright (c) 2020 Leo
+  HISTORY:
+  Date      	By	Comments
+  ----------	---	---------------------------------------------------------
+ -->
   <div id="app">
+    <CheckMobile/>
     <Header/>
     <div class="score-container fullscreen">
       <div class="arrow-left"></div>
@@ -34,6 +51,7 @@
 <script>
 import Header from './components/Header'
 import Prefeitos from './components/Prefeitos'
+import CheckMobile from './components/CheckMobile'
 
 export default {
   name: 'App',
@@ -46,6 +64,7 @@ export default {
   components: {
     Header,
     Prefeitos,
+    CheckMobile
   }
 }
 </script>

@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  29/10/2020 5:51:28 pm
+  Last Modified:  30/10/2020 3:35:58 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -126,6 +126,7 @@
                 <div class="share">
                   <i class="icon icon-facebook" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_destaque_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Prefeito: `${$mayor.nm}`" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/"></i>
                   <i class="icon icon-twitter" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_destaque_twitter" data-title="Apuração - Prefeito: `${$mayor.nm}`" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/"></i>
+                  <i class="icon icon-whatsapp" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_destaque_whatsapp" data-title="Apuração - Prefeito: `${$mayor.nm}`" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/"></i>
                 </div>
               </div>
             </div>
@@ -140,6 +141,7 @@
                     <li class="item-social">
                       <span class="icon-facebook" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Presidente: CIRO GOMES" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/br"></span>
                       <span class="icon-twitter" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Presidente: CIRO GOMES" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/br"></span>
+                      <span class="icon-facebook" data-metrics-location="bloco prefeitos" data-metrics-action="compartilhar_candidato_whatsapp" data-title="Apuração - Presidente: CIRO GOMES" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/" data-url="https://dev.cgn.inf.br/eleicoes/br"></span>
                     </li>
                     <li class="item-small-set">
                       <ul>
@@ -186,7 +188,7 @@ export default {
         cidadeSelecionada: 
         {
           label:"Cascavel",
-          code:"74934"
+          code: "74934",
         },
         cidades: []
       }
@@ -267,17 +269,10 @@ export default {
         if(!codeDefault && this.$router.history.current.params.id) {
           codeDefault = this.$router.history.current.params.id;
         }
-        // setTimeout(async () => {
-          var vm = this;
 
+        var vm = this;
         // Url de teste
-        // var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
-          
-          
-          var url = 'static/requests/eleicoes/ro00396-c0013-e008334-r.json';
-          
-
-        // const requestPrefV = axios.get(urlPrefV);
+        var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-r.json';
         const requestPrefeito = axios.get(url);
         this.finishLoadData = true;
         this.finishLoadSite = false;
@@ -286,17 +281,6 @@ export default {
           .then(
             axios.spread((...responses) => {
               const responsePrefV = responses[0];
-            
-            // Array.from(responsePrefFixo.data['carg']['col']).forEach(function(value, key){
-            //     vm.dadosPrefeitos = [].concat(responsePrefV.data[0]['cand'][key], value['par'][0]['cand']);
-
-            //   });
-
-            
-
-                // console.log('oref');
-                // console.log(responsePrefV.data['abr'][0]);
-                // console.log('oref');
 
             this.urnas = {
               barraAtual: "Brasil",
@@ -307,18 +291,12 @@ export default {
               eleitoresComparecimento: responsePrefV.data['c'],
               eleitoreAbstencao: responsePrefV.data['a'],
               candidatos: responsePrefV.data['cand'],
-              // candidatos: this.dadosPrefeitos,
-              // info geral da votação
+                // info geral da votação
               cVotosBrancos: responsePrefV.data['vb'],
               cVotosNulos: responsePrefV.data['vn'],
               cVotosValidos: responsePrefV.data['vv'],
-              // eleitoresTotal: responsePrefV.data['e'],
             }
             this.UniqueMayor = responsePrefV.data['cand'].length < 2 ? true : false;
-
-            // console.log("========");
-            // console.log(this.UniqueMayor);
-            // console.log("========");
 
             // DADOS DAS URNAS
             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
@@ -360,19 +338,11 @@ export default {
             this.urnas.cVotosNulos = this.milhar(this.urnas.cVotosNulos);
             
             this.urnas.pVotosValidos = parseFloat(this.urnas.cVotosValidos) * 100 / parseFloat(this.urnas.eleitoresTotal);
-            // alert(this.urnas.eleitoresTotal);
             this.urnas.pVotosValidos = parseFloat(this.urnas.pVotosValidos.toFixed(2)); 
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.toString();
             this.urnas.pVotosValidos = this.urnas.pVotosValidos.replace(".", ",");
             this.urnas.cVotosValidos = this.milhar(this.urnas.cVotosValidos);
 
-            
-            console.log('vt valido')
-            console.log(typeof this.urnas.eleitoresTotal);
-
-
-
-              // use/access the results
             })
           ).finally(() => {
               this.finishLoadData = false;
@@ -382,118 +352,6 @@ export default {
            this.finishLoadData = false;
             console.error(errors);
           });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//            axios
-//           .get(url)
-//           .then(response => {
-//             var url22 = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados/pr/pr'+this.cidadeSelecionada.code+'-c0011-e008707-006-f.json';
-//           axios
-//             .get(url2)
-//             .then(response2 => {
-//               console.log('foor');
-//               Array.from(response2.data['carg']['col']).forEach(function(value, key){
-//                 vm.dadosPrefeitos = [].concat(response.data['abr'][0]['cand'][key], value['par'][0]['cand']);
-//               });
-//               console.log('eeach');
-
-//             })
-//             .catch(error => {
-//               console.log(error)
-//               this.errored = true
-//             })
-//             .finally(() => {
-//               console.log('final');
-//               this.loading = false;
-//             });
-
-//         // setTimeout(async () => {
-// console.log('======= oi ======== 111');
-
-// console.log(vm.dadosPrefeitos);
-// console.log('======= oi ======== 333');
-//             // },2000);
-
-//             this.urnas = {
-//               barraAtual: "Brasil",
-//               localAtual: this.cidadeSelecionada.label,
-//               totalDeUrnas: response.data['abr'][0]['s'],
-//               urnasApuradas: response.data['abr'][0]['st'],
-//               eleitoresTotal: response.data['abr'][0]['e'],
-//               eleitoresComparecimento: response.data['abr'][0]['c'],
-//               eleitoreAbstencao: response.data['abr'][0]['a'],
-//               // candidatos: response.data['abr'][0]['cand'],
-//               candidatos: this.dadosPrefeitos,
-//               // info geral da votação
-//               cVotosBrancos: response.data['vb'],
-//               cVotosNulos: response.data['vn'],
-//               cVotosValidos: response.data['vv'],
-//               eleitoresTotal: response.data['e'],
-//             }
-
-//             // DADOS DAS URNAS
-//             this.urnas.votantes = this.urnas.eleitoresComparecimento * 100 / this.urnas.eleitoresTotal;
-//             if(isNaN(this.urnas.votantes)){
-//                 this.urnas.votantes = 0;
-//             }
-//             this.urnas.votantes = parseFloat(this.urnas.votantes.toFixed(2));
-//             this.urnas.votantesP = this.urnas.votantes.toString().split(",")[0];
-            
-//             this.urnas.ausentes = this.urnas.eleitoreAbstencao * 100 / this.urnas.eleitoresTotal;
-//             if(isNaN(this.urnas.ausentes)){
-//                 this.urnas.ausentes = 0;
-//             }
-//             this.urnas.ausentes = parseFloat(this.urnas.ausentes.toFixed(2)); 
-//             this.urnas.ausentesP = this.urnas.ausentes.toString().split(",")[0];
-
-//             this.urnas.apuradas = this.urnas.urnasApuradas * 100 / this.urnas.totalDeUrnas;
-//             this.urnas.apuradas = parseFloat(this.urnas.apuradas.toFixed(2));
-//             this.urnas.apuradas = this.urnas.apuradas.toString();
-//             this.urnas.apuradas = this.urnas.apuradas.replace(".", ",");
-
-//             this.urnas.eleitoresTotal = this.milhar(this.urnas.eleitoresTotal);
-//             this.urnas.tipo = 1;
-//             if(parseInt(this.urnas.urnasApuradas) === 0){
-//               this.urnas['naoIniciouApuracao'] = true;
-//             }
-
-//             // DADOS GERAIS (BRANCOS, NULOS, TOTAL ETC)
-//             this.urnas.pVotosBrancos = this.urnas.cVotosBrancos * 100 / this.urnas.eleitoresTotal;
-//             this.urnas.pVotosBrancos = parseFloat(this.urnas.pVotosBrancos.toFixed(2));
-//             this.urnas.pVotosBrancos = this.urnas.pVotosBrancos.toString();
-//             this.urnas.pVotosBrancos = this.urnas.pVotosBrancos.replace(".", ","); 
-//             this.urnas.cVotosBrancos = this.milhar(this.urnas.cVotosBrancos);
-
-//             this.urnas.pVotosNulos = this.urnas.cVotosNulos * 100 / this.urnas.eleitoresTotal;
-//             this.urnas.pVotosNulos = parseFloat(this.urnas.pVotosNulos.toFixed(2)); 
-//             this.urnas.pVotosNulos = this.urnas.pVotosNulos.toString();
-//             this.urnas.pVotosNulos = this.urnas.pVotosNulos.replace(".", ",");
-//             this.urnas.cVotosNulos = this.milhar(this.urnas.cVotosNulos);
-            
-//             this.urnas.pVotosValidos = this.urnas.cVotosValidos * 100 / this.urnas.eleitoresTotal;
-//             this.urnas.pVotosValidos = parseFloat(this.urnas.pVotosValidos.toFixed(2)); 
-//             this.urnas.pVotosValidos = this.urnas.pVotosValidos.toString();
-//             this.urnas.pVotosValidos = this.urnas.pVotosValidos.replace(".", ",");
-//             this.urnas.cVotosValidos = this.milhar(this.urnas.cVotosValidos);
-//           })
-//           .catch(error => {
-//             console.log(error)
-//             this.errored = true
-//           })
-//           .finally(() => this.loading = false)
-//         // }, 1000)
       }
     },
   	mounted(){
@@ -501,35 +359,24 @@ export default {
 
         // Descomentar para funfar
       var selectCode = 74934;
-      if(this.$router.history.current.params.id == 'undefined'){
+      if(this.$router.history.current.params.id == undefined){
         this.cidadeSelecionada.code = "74934";
+        alert('undef');
       } else {
-        this.cidadeSelecionada.code = selectCode;
-
+        this.cidadeSelecionada.code = this.$router.history.current.params.id;
       }
 
       this.listarCidades();
-
+    
       this.dadosUrna(this.$router.history.current.params.id);
       setInterval(async () => {
+        document.title = "CGN - Atualizando...";
         this.$root.$emit('cidadeSelecionada', this.cidadeSelecionada.code);
         this.dadosUrna(this.$router.history.current.params.id);
-      }, 60000)
+        document.title = "CGN Eleições 2020: Apuração de votos, resultado, candidatos eleitos";
+      }, 10000)
 
-      
-
-        // setTimeout(function(){ 
-        //     console.log('timeout 1');
-
-            this.finishLoadSite = true;
-        //     console.log('timeout');
-        //  }, 4000);
-
-
-
-
-        
-
+        this.finishLoadSite = true;
   	},
   	computed: {
       listaPrefeitos: function() {
