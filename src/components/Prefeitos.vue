@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  30/10/2020 4:26:53 pm
+  Last Modified:  03/11/2020 9:22:35 am
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -18,7 +18,7 @@
 
   <div>
 
-    <!-- <div v-bind:class="{siteload: !finishLoadSite}"></div> -->
+    <div v-bind:class="{siteload: !finishLoadSite}"></div>
     <div v-bind:class="{loader: finishLoadData}"></div>
     <!-- 
       -- HEADER COM AS INFORMAÇÕES DA CIDADE (URNAS, SELECIONAR CIDADE ETC) --
@@ -354,8 +354,7 @@ export default {
     },
   	mounted(){
         // Senão existir parâmetro na url pega a cidade Padrão Cascavel 
-
-        // Descomentar para funfar
+    
       var selectCode = 74934;
       if(this.$router.history.current.params.id == undefined){
         this.cidadeSelecionada.code = "74934";
@@ -403,14 +402,14 @@ export default {
     background:#fff;
   }
  
- @media(min-width: 1200px){
+ /* @media(min-width: 1200px){ */
   .uniqueMayorCss {
     width: 100%;
   }
   .city-mayor .uniqueCandidate {
     margin-top: -5%;
   }
-}
+/* } */
 
 .loader {
     position: fixed;
