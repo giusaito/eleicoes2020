@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 19/10/2020 1:57:48 pm
-  Last Modified:  12/11/2020 11:58:47 am
+  Last Modified:  13/11/2020 10:45:35 am
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -188,18 +188,10 @@ export default {
 	computed: {
 		rListarVereadores: function() {
 			function compare(a, b) {
-				// if(a.e == "s"){
-				// 	return -1;
-				// }
-				// if(b.e == "s"){
-				// 	return 0;
-				// }
-				if (Number(a.vap) > Number(b.vap)) {
-					return -1;
-				}else if(b.e == 's'){
+				if(Number(a.vap) > Number(b.vap)){
 					return -1;
 				}
-				if (Number(a.vap) < Number(b.vap)){
+				if(Number(a.vap) < Number(b.vap)){
 					return 0;
 				}
 			}

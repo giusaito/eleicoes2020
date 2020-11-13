@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  12/11/2020 11:50:18 am
+  Last Modified:  13/11/2020 2:50:56 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -105,8 +105,8 @@
               <div class="candidate-avatar candidate-avatar-type-big candidate-status-elected" v-bind:class="{uniqueMayorCss: UniqueMayor}" v-if="index <= 1">
                 <span>
                   <span class="candidate-mask">
-                    <!-- <img class="candidate-image" :src="`/static/fotos/${mayor.sqcand}.jpg`" :title="mayor.nm" :alt="mayor.nm"> -->
-                    <img class="candidate-image" :src="`https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/fotos/rr/230000001938.jpeg`" :title="mayor.nm" :alt="mayor.nm">
+                    <img class="candidate-image" :src="`/static/fotos/pref/${cidadeSelecionada.code}/${mayor.sqcand}.jpeg`" :title="mayor.nm" :alt="mayor.nm">
+                    <!-- <img class="candidate-image" :src="`https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/fotos/rr/230000001938.jpeg`" :title="mayor.nm" :alt="mayor.nm"> -->
                   </span>
                   <span class="candidate-status situation-1" v-if="mayor.st == '2º turno'">2º turno</span>
                   <span class="candidate-status nulled situation-1" v-else-if="mayor.dvt == 'Anulado'">Anulado</span>
@@ -199,10 +199,10 @@ export default {
         whatsapp: 'whatsapp',
         cidadeSelecionada: 
         {
-          // label:"Cascavel",
-          label:"Belém",
-          // code: "74934",
-          code: "04278",
+          label:"Cascavel",
+          // label:"Belém",
+          code: "74934",
+          // code: "04278",
         },
         cidades: []
       }
@@ -249,9 +249,9 @@ export default {
       },
       listarCidades(){
         // DEV PR
-        // var url = this.baseUrl + '/static/cidades/pr.json';
+        var url = this.baseUrl + '/static/cidades/pr.json';
         // DEV MS 
-        var url = this.baseUrl + '/static/cidades/pa.json';
+        // var url = this.baseUrl + '/static/cidades/pa.json';
         axios
           .get(url)
           .then(response => {
@@ -293,8 +293,8 @@ export default {
         var vm = this;
         // Url de teste
 
-        var url = this.baseUrl + '/static/eleicoes/1turno/pa/json/pref/'+this.cidadeSelecionada.code+'/pa'+this.cidadeSelecionada.code+'-c0011-e008334-v.json';
-        var url2 = this.baseUrl + '/static/eleicoes/1turno/pa/json/ver/'+this.cidadeSelecionada.code+'/pa'+this.cidadeSelecionada.code+'-c0013-e008334-v.json';
+        var url = this.baseUrl + '/static/eleicoes/1turno/pr/json/pref/'+this.cidadeSelecionada.code+'/pr'+this.cidadeSelecionada.code+'-c0011-e000426-v.json';
+        var url2 = this.baseUrl + '/static/eleicoes/1turno/pr/json/ver/'+this.cidadeSelecionada.code+'/pr'+this.cidadeSelecionada.code+'-c0013-e000426-v.json';
 
         const requestPrefeito = axios.get(url);
         const requestVereador = axios.get(url2);
@@ -406,11 +406,11 @@ export default {
     },
   	mounted(){
         // Senão existir parâmetro na url pega a cidade Padrão Cascavel 
-      // var selectCode = 74934;
-      var selectCode = "04278";
+      var selectCode = 74934;
+      // var selectCode = "04278";
       if(this.$router.history.current.params.id == undefined){
-        // this.cidadeSelecionada.code = "74934";
-        this.cidadeSelecionada.code = "04278";
+        this.cidadeSelecionada.code = "74934";
+        // this.cidadeSelecionada.code = "04278";
       } else {
         this.cidadeSelecionada.code = this.$router.history.current.params.id;
       }
