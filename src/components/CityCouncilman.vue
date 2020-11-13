@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 19/10/2020 1:57:48 pm
-  Last Modified:  13/11/2020 10:45:35 am
+  Last Modified:  13/11/2020 5:52:54 pm
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -62,8 +62,7 @@
 							<ul>
 								<li class="item-favorite">
 									<div class="favorite-star type-candidate has-id-true theme-dark is-favorite-false" data-item-id="17517">
-										<!-- <img class="candidate-image"  :src="`/static/fotos/${vereador.sqcand}.jpg`" :title="vereador.nm" :alt="vereador.nm"> -->
-										<img class="candidate-image"  :src="`https://resultados.tse.jus.br/publico/ele2020/divulgacao/simulado/8334/fotos/rr/230000001938.jpeg`" :title="vereador.nm" :alt="vereador.nm">
+										<img class="candidate-image"  :src="`${baseUrl}static/fotos/ver/${cidadeSelecionada.codigo}/${vereador.sqcand}.jpeg`" :title="vereador.nm" :alt="vereador.nm">
 									</div>
 								</li>
 								<li class="item-name">{{vereador.nm}}</li>
@@ -110,8 +109,8 @@ export default {
 			vereadores: [],
 			infoVereadores: [],
 			cidadeSelecionada:{
-				label: "Cascavel",
-				codigo: "74934"
+				label: "",
+				codigo: ""
 			},
 		}
 	},
@@ -153,9 +152,13 @@ export default {
 		},
 	},
 	mounted(){
+		this.$root.$on('share', (response) => {
+			this.cidadeSelecionada.codigo = response;
+			console.log(this.cidadeSelecionada.codigo);
+		});
+		
 		this.$root.$on('dadosVereador', (response) => {
 			this.vereadores = response.cand;
-			console.log(response);
 			this.infoVereadores = {
 				cVotosBrancos: response['vb'],
 				pVotosBrancos: response['pvb'],

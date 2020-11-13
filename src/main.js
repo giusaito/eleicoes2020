@@ -6,7 +6,7 @@
  * E-mail: leonardo.nascimento21@gmail.com
  * ---------------------------------------------------------------------
  * Data da criação: 19/10/2020 1:57:48 pm
- * Last Modified:  11/11/2020 3:52:42 pm
+ * Last Modified:  13/11/2020 3:12:12 pm
  * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
  * ---------------------------------------------------------------------
  * Copyright (c) 2020 Leo
@@ -22,7 +22,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import vSelect from 'vue-select'
 if(process.env.NODE_ENV == "production"){
-  Vue.prototype.baseUrl = 'https://cgn.inf.br/eleicoes/2020/'
+  // Vue.prototype.baseUrl = 'https://cgn.inf.br/eleicoes/2020/'
+  Vue.prototype.baseUrl = 'https://dev.cgn.inf.br/eleicoes/2020/'
 }else {
   Vue.prototype.baseUrl = 'http://localhost:8080/'
 }

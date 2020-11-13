@@ -1,0 +1,1598 @@
+[
+    {
+        "label": "Abatiá",
+        "code": "74012"
+    },
+    {
+        "label": "Adrianópolis",
+        "code": "74039"
+    },
+    {
+        "label": "Agudos Do Sul",
+        "code": "74055"
+    },
+    {
+        "label": "Almirante Tamandaré",
+        "code": "74071"
+    },
+    {
+        "label": "Altamira Do Paraná",
+        "code": "84557"
+    },
+    {
+        "label": "Alto Paraíso",
+        "code": "74926"
+    },
+    {
+        "label": "Alto Paraná",
+        "code": "74098"
+    },
+    {
+        "label": "Alto Piquiri",
+        "code": "74110"
+    },
+    {
+        "label": "Altônia",
+        "code": "79510"
+    },
+    {
+        "label": "Alvorada Do Sul",
+        "code": "74136"
+    },
+    {
+        "label": "Amaporã",
+        "code": "74152"
+    },
+    {
+        "label": "Ampére",
+        "code": "74179"
+    },
+    {
+        "label": "Anahy",
+        "code": "74101"
+    },
+    {
+        "label": "Andirá",
+        "code": "74195"
+    },
+    {
+        "label": "Ângulo",
+        "code": "74128"
+    },
+    {
+        "label": "Antonina",
+        "code": "74217"
+    },
+    {
+        "label": "Antonio Olinto",
+        "code": "74233"
+    },
+    {
+        "label": "Apucarana",
+        "code": "74250"
+    },
+    {
+        "label": "Arapongas",
+        "code": "74276"
+    },
+    {
+        "label": "Arapoti",
+        "code": "74292"
+    },
+    {
+        "label": "Arapuã",
+        "code": "75108"
+    },
+    {
+        "label": "Araruna",
+        "code": "74314"
+    },
+    {
+        "label": "Araucária",
+        "code": "74357"
+    },
+    {
+        "label": "Ariranha Do Ivaí",
+        "code": "75086"
+    },
+    {
+        "label": "Assaí",
+        "code": "74373"
+    },
+    {
+        "label": "Assis Chateaubriand",
+        "code": "79537"
+    },
+    {
+        "label": "Astorga",
+        "code": "74390"
+    },
+    {
+        "label": "Atalaia",
+        "code": "74411"
+    },
+    {
+        "label": "Balsa Nova",
+        "code": "74438"
+    },
+    {
+        "label": "Bandeirantes",
+        "code": "74454"
+    },
+    {
+        "label": "Barbosa Ferraz",
+        "code": "74470"
+    },
+    {
+        "label": "Barra Do Jacaré",
+        "code": "74519"
+    },
+    {
+        "label": "Barracão",
+        "code": "74497"
+    },
+    {
+        "label": "Bela Vista Da Caroba",
+        "code": "75124"
+    },
+    {
+        "label": "Bela Vista Do Paraíso",
+        "code": "74535"
+    },
+    {
+        "label": "Bituruna",
+        "code": "74551"
+    },
+    {
+        "label": "Boa Esperança",
+        "code": "74578"
+    },
+    {
+        "label": "Boa Esperança Do Iguaçu",
+        "code": "74144"
+    },
+    {
+        "label": "Boa Ventura De São Roque",
+        "code": "75140"
+    },
+    {
+        "label": "Boa Vista Da Aparecida",
+        "code": "79812"
+    },
+    {
+        "label": "Bocaiúva Do Sul",
+        "code": "74594"
+    },
+    {
+        "label": "Bom Jesus Do Sul",
+        "code": "75167"
+    },
+    {
+        "label": "Bom Sucesso",
+        "code": "74616"
+    },
+    {
+        "label": "Bom Sucesso Do Sul",
+        "code": "74160"
+    },
+    {
+        "label": "Borrazópolis",
+        "code": "74632"
+    },
+    {
+        "label": "Braganey",
+        "code": "79839"
+    },
+    {
+        "label": "Brasilândia Do Sul",
+        "code": "74187"
+    },
+    {
+        "label": "Cafeara",
+        "code": "74659"
+    },
+    {
+        "label": "Cafelândia",
+        "code": "79855"
+    },
+    {
+        "label": "Cafezal Do Sul",
+        "code": "74209"
+    },
+    {
+        "label": "Califórnia",
+        "code": "74675"
+    },
+    {
+        "label": "Cambará",
+        "code": "74691"
+    },
+    {
+        "label": "Cambé",
+        "code": "74713"
+    },
+    {
+        "label": "Cambira",
+        "code": "74730"
+    },
+    {
+        "label": "Campina Da Lagoa",
+        "code": "74756"
+    },
+    {
+        "label": "Campina Do Simão",
+        "code": "75183"
+    },
+    {
+        "label": "Campina Grande Do Sul",
+        "code": "74772"
+    },
+    {
+        "label": "Campo Bonito",
+        "code": "74780"
+    },
+    {
+        "label": "Campo Do Tenente",
+        "code": "74799"
+    },
+    {
+        "label": "Campo Largo",
+        "code": "74810"
+    },
+    {
+        "label": "Campo Magro",
+        "code": "75205"
+    },
+    {
+        "label": "Campo Mourão",
+        "code": "74837"
+    },
+    {
+        "label": "Cândido De Abreu",
+        "code": "74853"
+    },
+    {
+        "label": "Candói",
+        "code": "74225"
+    },
+    {
+        "label": "Cantagalo",
+        "code": "84514"
+    },
+    {
+        "label": "Capanema",
+        "code": "74870"
+    },
+    {
+        "label": "Capitão Leônidas Marques",
+        "code": "74896"
+    },
+    {
+        "label": "Carambeí",
+        "code": "75221"
+    },
+    {
+        "label": "Carlópolis",
+        "code": "74918"
+    },
+    {
+        "label": "Cascavel",
+        "code": "74934"
+    },
+    {
+        "label": "Castro",
+        "code": "74950"
+    },
+    {
+        "label": "Catanduvas",
+        "code": "74977"
+    },
+    {
+        "label": "Centenário Do Sul",
+        "code": "74993"
+    },
+    {
+        "label": "Cerro Azul",
+        "code": "75019"
+    },
+    {
+        "label": "Céu Azul",
+        "code": "79570"
+    },
+    {
+        "label": "Chopinzinho",
+        "code": "75035"
+    },
+    {
+        "label": "Cianorte",
+        "code": "75051"
+    },
+    {
+        "label": "Cidade Gaúcha",
+        "code": "75078"
+    },
+    {
+        "label": "Clevelândia",
+        "code": "75094"
+    },
+    {
+        "label": "Colombo",
+        "code": "75132"
+    },
+    {
+        "label": "Colorado",
+        "code": "75159"
+    },
+    {
+        "label": "Congonhinhas",
+        "code": "75175"
+    },
+    {
+        "label": "Conselheiro Mairinck",
+        "code": "75191"
+    },
+    {
+        "label": "Contenda",
+        "code": "75213"
+    },
+    {
+        "label": "Corbélia",
+        "code": "75230"
+    },
+    {
+        "label": "Cornélio Procópio",
+        "code": "75256"
+    },
+    {
+        "label": "Coronel Domingos Soares",
+        "code": "75248"
+    },
+    {
+        "label": "Coronel Vivida",
+        "code": "75272"
+    },
+    {
+        "label": "Corumbataí do Sul",
+        "code": "75280"
+    },
+    {
+        "label": "Cruz Machado",
+        "code": "75337"
+    },
+    {
+        "label": "Cruzeiro Do Iguaçu",
+        "code": "74241"
+    },
+    {
+        "label": "Cruzeiro Do Oeste",
+        "code": "75299"
+    },
+    {
+        "label": "Cruzeiro Do Sul",
+        "code": "75310"
+    },
+    {
+        "label": "Cruzmaltina",
+        "code": "75264"
+    },
+    {
+        "label": "Curitiba",
+        "code": "75353"
+    },
+    {
+        "label": "Curiúva",
+        "code": "75370"
+    },
+    {
+        "label": "Diamante D'oeste",
+        "code": "75400"
+    },
+    {
+        "label": "Diamante Do Norte",
+        "code": "75396"
+    },
+    {
+        "label": "Diamante Do Sul",
+        "code": "74268"
+    },
+    {
+        "label": "Dois Vizinhos",
+        "code": "75418"
+    },
+    {
+        "label": "Douradina",
+        "code": "84654"
+    },
+    {
+        "label": "Doutor Camargo",
+        "code": "75434"
+    },
+    {
+        "label": "Doutor Ulysses",
+        "code": "74942"
+    },
+    {
+        "label": "Enéas Marques",
+        "code": "75450"
+    },
+    {
+        "label": "Engenheiro Beltrão",
+        "code": "75477"
+    },
+    {
+        "label": "Entre Rios Do Oeste",
+        "code": "74284"
+    },
+    {
+        "label": "Esperança Nova",
+        "code": "75302"
+    },
+    {
+        "label": "Espigão Alto Do Iguaçu",
+        "code": "75329"
+    },
+    {
+        "label": "Farol",
+        "code": "74306"
+    },
+    {
+        "label": "Faxinal",
+        "code": "75493"
+    },
+    {
+        "label": "Fazenda Rio Grande",
+        "code": "74322"
+    },
+    {
+        "label": "Fênix",
+        "code": "75515"
+    },
+    {
+        "label": "Fernandes Pinheiro",
+        "code": "75345"
+    },
+    {
+        "label": "Figueira",
+        "code": "84573"
+    },
+    {
+        "label": "Flor Da Serra Do Sul",
+        "code": "74349"
+    },
+    {
+        "label": "Floraí",
+        "code": "75531"
+    },
+    {
+        "label": "Floresta",
+        "code": "75558"
+    },
+    {
+        "label": "Florestópolis",
+        "code": "75574"
+    },
+    {
+        "label": "Flórida",
+        "code": "75590"
+    },
+    {
+        "label": "Formosa Do Oeste",
+        "code": "75612"
+    },
+    {
+        "label": "Foz Do Iguaçu",
+        "code": "75639"
+    },
+    {
+        "label": "Foz Do Jordão",
+        "code": "75361"
+    },
+    {
+        "label": "Francisco Alves",
+        "code": "79774"
+    },
+    {
+        "label": "Francisco Beltrão",
+        "code": "75655"
+    },
+    {
+        "label": "General Carneiro",
+        "code": "75671"
+    },
+    {
+        "label": "Godoy Moreira",
+        "code": "74004"
+    },
+    {
+        "label": "Goioerê",
+        "code": "75698"
+    },
+    {
+        "label": "Goioxim",
+        "code": "75388"
+    },
+    {
+        "label": "Grandes Rios",
+        "code": "79596"
+    },
+    {
+        "label": "Guaíra",
+        "code": "75710"
+    },
+    {
+        "label": "Guairaçá",
+        "code": "75736"
+    },
+    {
+        "label": "Guamiranga",
+        "code": "75426"
+    },
+    {
+        "label": "Guapirama",
+        "code": "75752"
+    },
+    {
+        "label": "Guaporema",
+        "code": "75779"
+    },
+    {
+        "label": "Guaraci",
+        "code": "75795"
+    },
+    {
+        "label": "Guaraniaçu",
+        "code": "75817"
+    },
+    {
+        "label": "Guarapuava",
+        "code": "75833"
+    },
+    {
+        "label": "Guaraqueçaba",
+        "code": "75850"
+    },
+    {
+        "label": "Guaratuba",
+        "code": "75876"
+    },
+    {
+        "label": "Honório Serpa",
+        "code": "74365"
+    },
+    {
+        "label": "Ibaiti",
+        "code": "75892"
+    },
+    {
+        "label": "Ibema",
+        "code": "74020"
+    },
+    {
+        "label": "Ibiporã",
+        "code": "75914"
+    },
+    {
+        "label": "Icaraíma",
+        "code": "75930"
+    },
+    {
+        "label": "Iguaraçu",
+        "code": "75957"
+    },
+    {
+        "label": "Iguatu",
+        "code": "74381"
+    },
+    {
+        "label": "Imbaú",
+        "code": "75442"
+    },
+    {
+        "label": "Imbituva",
+        "code": "75973"
+    },
+    {
+        "label": "Inácio Martins",
+        "code": "75990"
+    },
+    {
+        "label": "Inajá",
+        "code": "76015"
+    },
+    {
+        "label": "Indianápolis",
+        "code": "79618"
+    },
+    {
+        "label": "Ipiranga",
+        "code": "76031"
+    },
+    {
+        "label": "Iporã",
+        "code": "76058"
+    },
+    {
+        "label": "Iracema Do Oeste",
+        "code": "74403"
+    },
+    {
+        "label": "Irati",
+        "code": "76074"
+    },
+    {
+        "label": "Iretama",
+        "code": "76090"
+    },
+    {
+        "label": "Itaguajé",
+        "code": "76112"
+    },
+    {
+        "label": "Itaipulândia",
+        "code": "75000"
+    },
+    {
+        "label": "Itambaracá",
+        "code": "76139"
+    },
+    {
+        "label": "Itambé",
+        "code": "76155"
+    },
+    {
+        "label": "Itapejara D'oeste",
+        "code": "76171"
+    },
+    {
+        "label": "Itaperuçu",
+        "code": "74446"
+    },
+    {
+        "label": "Itaúna Do Sul",
+        "code": "76198"
+    },
+    {
+        "label": "Ivaí",
+        "code": "76210"
+    },
+    {
+        "label": "Ivaiporã",
+        "code": "76236"
+    },
+    {
+        "label": "Ivaté",
+        "code": "74462"
+    },
+    {
+        "label": "Ivatuba",
+        "code": "76252"
+    },
+    {
+        "label": "Jaboti",
+        "code": "76279"
+    },
+    {
+        "label": "Jacarezinho",
+        "code": "76295"
+    },
+    {
+        "label": "Jaguapitã",
+        "code": "76317"
+    },
+    {
+        "label": "Jaguariaíva",
+        "code": "76333"
+    },
+    {
+        "label": "Jandaia Do Sul",
+        "code": "76350"
+    },
+    {
+        "label": "Janiópolis",
+        "code": "76376"
+    },
+    {
+        "label": "Japira",
+        "code": "76392"
+    },
+    {
+        "label": "Japurá",
+        "code": "76414"
+    },
+    {
+        "label": "Jardim Alegre",
+        "code": "76430"
+    },
+    {
+        "label": "Jardim Olinda",
+        "code": "76457"
+    },
+    {
+        "label": "Jataizinho",
+        "code": "76473"
+    },
+    {
+        "label": "Jesuítas",
+        "code": "79979"
+    },
+    {
+        "label": "Joaquim Távora",
+        "code": "76490"
+    },
+    {
+        "label": "Jundiaí Do Sul",
+        "code": "76511"
+    },
+    {
+        "label": "Juranda",
+        "code": "84638"
+    },
+    {
+        "label": "Jussara",
+        "code": "76538"
+    },
+    {
+        "label": "Kaloré",
+        "code": "76554"
+    },
+    {
+        "label": "Lapa",
+        "code": "76570"
+    },
+    {
+        "label": "Laranjal",
+        "code": "74985"
+    },
+    {
+        "label": "Laranjeiras Do Sul",
+        "code": "76597"
+    },
+    {
+        "label": "Leópolis",
+        "code": "76619"
+    },
+    {
+        "label": "Lidianópolis",
+        "code": "74489"
+    },
+    {
+        "label": "Lindoeste",
+        "code": "74047"
+    },
+    {
+        "label": "Loanda",
+        "code": "76635"
+    },
+    {
+        "label": "Lobato",
+        "code": "76651"
+    },
+    {
+        "label": "Londrina",
+        "code": "76678"
+    },
+    {
+        "label": "Luiziana",
+        "code": "75809"
+    },
+    {
+        "label": "Lunardelli",
+        "code": "84590"
+    },
+    {
+        "label": "Lupionápolis",
+        "code": "76694"
+    },
+    {
+        "label": "Mallet",
+        "code": "76716"
+    },
+    {
+        "label": "Mamborê",
+        "code": "76732"
+    },
+    {
+        "label": "Mandaguaçu",
+        "code": "76759"
+    },
+    {
+        "label": "Mandaguari",
+        "code": "76775"
+    },
+    {
+        "label": "Mandirituba",
+        "code": "76791"
+    },
+    {
+        "label": "Manfrinópolis",
+        "code": "75469"
+    },
+    {
+        "label": "Mangueirinha",
+        "code": "75116"
+    },
+    {
+        "label": "Manoel Ribas",
+        "code": "76813"
+    },
+    {
+        "label": "Marechal Cândido Rondon",
+        "code": "76830"
+    },
+    {
+        "label": "Maria Helena",
+        "code": "76856"
+    },
+    {
+        "label": "Marialva",
+        "code": "76872"
+    },
+    {
+        "label": "Marilândia Do Sul",
+        "code": "74330"
+    },
+    {
+        "label": "Marilena",
+        "code": "79758"
+    },
+    {
+        "label": "Mariluz",
+        "code": "76899"
+    },
+    {
+        "label": "Maringá",
+        "code": "76910"
+    },
+    {
+        "label": "Mariópolis",
+        "code": "76937"
+    },
+    {
+        "label": "Maripá",
+        "code": "74500"
+    },
+    {
+        "label": "Marmeleiro",
+        "code": "76953"
+    },
+    {
+        "label": "Marquinho",
+        "code": "75485"
+    },
+    {
+        "label": "Marumbi",
+        "code": "76970"
+    },
+    {
+        "label": "Matelândia",
+        "code": "76996"
+    },
+    {
+        "label": "Matinhos",
+        "code": "79634"
+    },
+    {
+        "label": "Mato Rico",
+        "code": "74527"
+    },
+    {
+        "label": "Mauá Da Serra",
+        "code": "74543"
+    },
+    {
+        "label": "Medianeira",
+        "code": "77011"
+    },
+    {
+        "label": "Mercedes",
+        "code": "74560"
+    },
+    {
+        "label": "Mirador",
+        "code": "77038"
+    },
+    {
+        "label": "Miraselva",
+        "code": "77054"
+    },
+    {
+        "label": "Missal",
+        "code": "84697"
+    },
+    {
+        "label": "Moreira Sales",
+        "code": "77070"
+    },
+    {
+        "label": "Morretes",
+        "code": "77097"
+    },
+    {
+        "label": "Munhoz De Melo",
+        "code": "77119"
+    },
+    {
+        "label": "Nossa Senhora Das Graças",
+        "code": "77135"
+    },
+    {
+        "label": "Nova Aliança Do Ivaí",
+        "code": "77151"
+    },
+    {
+        "label": "Nova América Da Colina",
+        "code": "77178"
+    },
+    {
+        "label": "Nova Aurora",
+        "code": "79650"
+    },
+    {
+        "label": "Nova Cantu",
+        "code": "77194"
+    },
+    {
+        "label": "Nova Esperança",
+        "code": "77216"
+    },
+    {
+        "label": "Nova Esperança Do Sudoeste",
+        "code": "75027"
+    },
+    {
+        "label": "Nova Fátima",
+        "code": "77232"
+    },
+    {
+        "label": "Nova Laranjeiras",
+        "code": "74586"
+    },
+    {
+        "label": "Nova Londrina",
+        "code": "77259"
+    },
+    {
+        "label": "Nova Olímpia",
+        "code": "79677"
+    },
+    {
+        "label": "Nova Prata Do Iguaçu",
+        "code": "79952"
+    },
+    {
+        "label": "Nova Santa Bárbara",
+        "code": "74608"
+    },
+    {
+        "label": "Nova Santa Rosa",
+        "code": "79790"
+    },
+    {
+        "label": "Nova Tebas",
+        "code": "75760"
+    },
+    {
+        "label": "Novo Itacolomi",
+        "code": "74420"
+    },
+    {
+        "label": "Ortigueira",
+        "code": "77275"
+    },
+    {
+        "label": "Ourizona",
+        "code": "77291"
+    },
+    {
+        "label": "Ouro Verde Do Oeste",
+        "code": "74063"
+    },
+    {
+        "label": "Paiçandu",
+        "code": "77313"
+    },
+    {
+        "label": "Palmas",
+        "code": "77330"
+    },
+    {
+        "label": "Palmeira",
+        "code": "77356"
+    },
+    {
+        "label": "Palmital",
+        "code": "77372"
+    },
+    {
+        "label": "Palotina",
+        "code": "77399"
+    },
+    {
+        "label": "Paraíso Do Norte",
+        "code": "77410"
+    },
+    {
+        "label": "Paranacity",
+        "code": "77437"
+    },
+    {
+        "label": "Paranaguá",
+        "code": "77453"
+    },
+    {
+        "label": "Paranapoema",
+        "code": "77470"
+    },
+    {
+        "label": "Paranavaí",
+        "code": "77496"
+    },
+    {
+        "label": "Pato Bragado",
+        "code": "74624"
+    },
+    {
+        "label": "Pato Branco",
+        "code": "77518"
+    },
+    {
+        "label": "Paula Freitas",
+        "code": "77534"
+    },
+    {
+        "label": "Paulo Frontin",
+        "code": "77550"
+    },
+    {
+        "label": "Peabiru",
+        "code": "77577"
+    },
+    {
+        "label": "Perobal",
+        "code": "75507"
+    },
+    {
+        "label": "Pérola",
+        "code": "79693"
+    },
+    {
+        "label": "Pérola D'oeste",
+        "code": "77593"
+    },
+    {
+        "label": "Piên",
+        "code": "77615"
+    },
+    {
+        "label": "Pinhais",
+        "code": "75043"
+    },
+    {
+        "label": "Pinhal De São Bento",
+        "code": "74640"
+    },
+    {
+        "label": "Pinhalão",
+        "code": "77631"
+    },
+    {
+        "label": "Pinhão",
+        "code": "77658"
+    },
+    {
+        "label": "Piraí Do Sul",
+        "code": "77674"
+    },
+    {
+        "label": "Piraquara",
+        "code": "77690"
+    },
+    {
+        "label": "Pitanga",
+        "code": "77712"
+    },
+    {
+        "label": "Pitangueiras",
+        "code": "74667"
+    },
+    {
+        "label": "Planaltina Do Paraná",
+        "code": "77739"
+    },
+    {
+        "label": "Planalto",
+        "code": "77755"
+    },
+    {
+        "label": "Ponta Grossa",
+        "code": "77771"
+    },
+    {
+        "label": "Pontal Do Paraná",
+        "code": "75523"
+    },
+    {
+        "label": "Porecatu",
+        "code": "77798"
+    },
+    {
+        "label": "Porto Amazonas",
+        "code": "77810"
+    },
+    {
+        "label": "Porto Barreiro",
+        "code": "75540"
+    },
+    {
+        "label": "Porto Rico",
+        "code": "77836"
+    },
+    {
+        "label": "Porto Vitória",
+        "code": "77852"
+    },
+    {
+        "label": "Prado Ferreira",
+        "code": "75566"
+    },
+    {
+        "label": "Pranchita",
+        "code": "79910"
+    },
+    {
+        "label": "Presidente Castelo Branco",
+        "code": "77879"
+    },
+    {
+        "label": "Primeiro De Maio",
+        "code": "77895"
+    },
+    {
+        "label": "Prudentópolis",
+        "code": "77917"
+    },
+    {
+        "label": "Quarto Centenário",
+        "code": "75582"
+    },
+    {
+        "label": "Quatiguá",
+        "code": "77933"
+    },
+    {
+        "label": "Quatro Barras",
+        "code": "77950"
+    },
+    {
+        "label": "Quatro Pontes",
+        "code": "74683"
+    },
+    {
+        "label": "Quedas Do Iguaçu",
+        "code": "79553"
+    },
+    {
+        "label": "Querência Do Norte",
+        "code": "77976"
+    },
+    {
+        "label": "Quinta Do Sol",
+        "code": "77992"
+    },
+    {
+        "label": "Quitandinha",
+        "code": "78018"
+    },
+    {
+        "label": "Ramilândia",
+        "code": "74705"
+    },
+    {
+        "label": "Rancho Alegre",
+        "code": "78034"
+    },
+    {
+        "label": "Rancho Alegre D'oeste",
+        "code": "74721"
+    },
+    {
+        "label": "Realeza",
+        "code": "78050"
+    },
+    {
+        "label": "Rebouças",
+        "code": "78077"
+    },
+    {
+        "label": "Renascença",
+        "code": "78093"
+    },
+    {
+        "label": "Reserva",
+        "code": "78115"
+    },
+    {
+        "label": "Reserva Do Iguaçu",
+        "code": "75604"
+    },
+    {
+        "label": "Ribeirão Claro",
+        "code": "78131"
+    },
+    {
+        "label": "Ribeirão Do Pinhal",
+        "code": "78158"
+    },
+    {
+        "label": "Rio Azul",
+        "code": "78174"
+    },
+    {
+        "label": "Rio Bom",
+        "code": "78190"
+    },
+    {
+        "label": "Rio Bonito Do Iguaçu",
+        "code": "74748"
+    },
+    {
+        "label": "Rio Branco Do Ivaí",
+        "code": "75620"
+    },
+    {
+        "label": "Rio Branco Do Sul",
+        "code": "78212"
+    },
+    {
+        "label": "Rio Negro",
+        "code": "78239"
+    },
+    {
+        "label": "Rolândia",
+        "code": "78255"
+    },
+    {
+        "label": "Roncador",
+        "code": "78271"
+    },
+    {
+        "label": "Rondon",
+        "code": "78298"
+    },
+    {
+        "label": "Rosário Do Ivaí",
+        "code": "75744"
+    },
+    {
+        "label": "Sabáudia",
+        "code": "78310"
+    },
+    {
+        "label": "Salgado Filho",
+        "code": "78336"
+    },
+    {
+        "label": "Salto Do Itararé",
+        "code": "78352"
+    },
+    {
+        "label": "Salto Do Lontra",
+        "code": "78379"
+    },
+    {
+        "label": "Santa Amélia",
+        "code": "78395"
+    },
+    {
+        "label": "Santa Cecília Do Pavão",
+        "code": "78417"
+    },
+    {
+        "label": "Santa Cruz De Monte Castelo",
+        "code": "78433"
+    },
+    {
+        "label": "Santa Fé",
+        "code": "78450"
+    },
+    {
+        "label": "Santa Helena",
+        "code": "79715"
+    },
+    {
+        "label": "Santa Inês",
+        "code": "78476"
+    },
+    {
+        "label": "Santa Isabel Do Ivaí",
+        "code": "78492"
+    },
+    {
+        "label": "Santa Izabel Do Oeste",
+        "code": "78514"
+    },
+    {
+        "label": "Santa Lúcia",
+        "code": "74764"
+    },
+    {
+        "label": "Santa Maria Do Oeste",
+        "code": "74802"
+    },
+    {
+        "label": "Santa Mariana",
+        "code": "78530"
+    },
+    {
+        "label": "Santa Mônica",
+        "code": "74829"
+    },
+    {
+        "label": "Santa Tereza Do Oeste",
+        "code": "74080"
+    },
+    {
+        "label": "Santa Terezinha De Itaipu",
+        "code": "84670"
+    },
+    {
+        "label": "Santana Do Itararé",
+        "code": "78557"
+    },
+    {
+        "label": "Santo Antônio Da Platina",
+        "code": "78590"
+    },
+    {
+        "label": "Santo Antonio Do Caiuá",
+        "code": "78611"
+    },
+    {
+        "label": "Santo Antônio Do Paraáso",
+        "code": "78638"
+    },
+    {
+        "label": "Santo Antônio Do Sudoeste",
+        "code": "78573"
+    },
+    {
+        "label": "Santo Inácio",
+        "code": "78654"
+    },
+    {
+        "label": "São Carlos Do Ivaí",
+        "code": "78670"
+    },
+    {
+        "label": "São Jerônimo Da Serra",
+        "code": "78697"
+    },
+    {
+        "label": "São João",
+        "code": "78719"
+    },
+    {
+        "label": "São João Do Caiuá",
+        "code": "78735"
+    },
+    {
+        "label": "São João Do Ivaí",
+        "code": "78751"
+    },
+    {
+        "label": "São João Do Triunfo",
+        "code": "78778"
+    },
+    {
+        "label": "São Jorge D'oeste",
+        "code": "78816"
+    },
+    {
+        "label": "São Jorge Do Ivaí",
+        "code": "78794"
+    },
+    {
+        "label": "São Jorge Do Patrocínio",
+        "code": "79995"
+    },
+    {
+        "label": "São José Da Boa Vista",
+        "code": "78832"
+    },
+    {
+        "label": "São José Das Palmeiras",
+        "code": "84719"
+    },
+    {
+        "label": "São José Dos Pinhais",
+        "code": "78859"
+    },
+    {
+        "label": "São Manoel Do Paraná",
+        "code": "74845"
+    },
+    {
+        "label": "São Mateus Do Sul",
+        "code": "78875"
+    },
+    {
+        "label": "São Miguel Do Iguaçu",
+        "code": "78891"
+    },
+    {
+        "label": "São Pedro Do Iguaçu",
+        "code": "74861"
+    },
+    {
+        "label": "São Pedro Do Ivaí",
+        "code": "78913"
+    },
+    {
+        "label": "São Pedro Do Paraná",
+        "code": "78930"
+    },
+    {
+        "label": "São Sebastião Da Amoreira",
+        "code": "78956"
+    },
+    {
+        "label": "São Tomé",
+        "code": "78972"
+    },
+    {
+        "label": "Sapopema",
+        "code": "78999"
+    },
+    {
+        "label": "Sarandi",
+        "code": "84611"
+    },
+    {
+        "label": "Saudade Do Iguaçu",
+        "code": "75060"
+    },
+    {
+        "label": "Sengés",
+        "code": "79014"
+    },
+    {
+        "label": "Serranópolis Do Iguaçu",
+        "code": "75647"
+    },
+    {
+        "label": "Sertaneja",
+        "code": "79030"
+    },
+    {
+        "label": "Sertanópolis",
+        "code": "79057"
+    },
+    {
+        "label": "Siqueira Campos",
+        "code": "79073"
+    },
+    {
+        "label": "Sulina",
+        "code": "75787"
+    },
+    {
+        "label": "Tamarana",
+        "code": "75663"
+    },
+    {
+        "label": "Tamboara",
+        "code": "79090"
+    },
+    {
+        "label": "Tapejara",
+        "code": "79111"
+    },
+    {
+        "label": "Tapira",
+        "code": "79731"
+    },
+    {
+        "label": "Teixeira Soares",
+        "code": "79138"
+    },
+    {
+        "label": "Telêmaco Borba",
+        "code": "79154"
+    },
+    {
+        "label": "Terra Boa",
+        "code": "79170"
+    },
+    {
+        "label": "Terra Rica",
+        "code": "79197"
+    },
+    {
+        "label": "Terra Roxa",
+        "code": "79219"
+    },
+    {
+        "label": "Tibagi",
+        "code": "79235"
+    },
+    {
+        "label": "Tijucas Do Sul",
+        "code": "79251"
+    },
+    {
+        "label": "Toledo",
+        "code": "79278"
+    },
+    {
+        "label": "Tomazina",
+        "code": "79294"
+    },
+    {
+        "label": "Três Barras Do Paraná",
+        "code": "79871"
+    },
+    {
+        "label": "Tunas Do Paraná",
+        "code": "74888"
+    },
+    {
+        "label": "Tuneiras Do Oeste",
+        "code": "79316"
+    },
+    {
+        "label": "Tupãssi",
+        "code": "79936"
+    },
+    {
+        "label": "Turvo",
+        "code": "84530"
+    },
+    {
+        "label": "Ubiratã",
+        "code": "79332"
+    },
+    {
+        "label": "Umuarama",
+        "code": "79359"
+    },
+    {
+        "label": "União Da Vitória",
+        "code": "79375"
+    },
+    {
+        "label": "Uniflor",
+        "code": "79391"
+    },
+    {
+        "label": "Uraí",
+        "code": "79413"
+    },
+    {
+        "label": "Ventania",
+        "code": "74900"
+    },
+    {
+        "label": "Vera Cruz Do Oeste",
+        "code": "79898"
+    },
+    {
+        "label": "Verê",
+        "code": "79456"
+    },
+    {
+        "label": "Virmond",
+        "code": "74969"
+    },
+    {
+        "label": "Vitorino",
+        "code": "79472"
+    },
+    {
+        "label": "Wenceslau Braz",
+        "code": "79430"
+    },
+    {
+        "label": "Xambré",
+        "code": "79499"
+    }
+]
