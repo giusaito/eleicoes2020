@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 19/10/2020 1:57:48 pm
-  Last Modified:  30/10/2020 4:27:03 pm
+  Last Modified:  04/11/2020 10:51:51 am
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -31,12 +31,12 @@ export default {
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
           let file = document.createElement('link');
           file.rel = 'stylesheet';
-          file.href = '/static/template/css/mobile.css?v=2'
+          file.href = this.baseUrl + '/static/template/css/mobile.css?v=2'
           document.head.appendChild(file);
         }else{
          let file = document.createElement('link');
           file.rel = 'stylesheet';
-          file.href = '/static/template/css/style.css?v=2'
+          file.href = this.baseUrl +'/static/template/css/style.css?v=2'
           document.head.appendChild(file);
         }
       if(process.env.NODE_ENV == "production")
@@ -45,9 +45,7 @@ export default {
 
    	},
     created() {
-         this.mobileCheck();
-        // alert(this.check);
-        console.log('oooi');
+      this.mobileCheck();
     }
 }
 </script>

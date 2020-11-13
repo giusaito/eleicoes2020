@@ -1,39 +1,55 @@
 @font-face {
 	font-family: Text;
-	src: url(/static/template/fonts/text-lighter.eot);
-	src: local("?"), url(/static/template/fonts/text-lighter.eot#iefix) format("embedded-opentype"), url(/static/template/fonts/text-lighter.woff) format("woff"), url(/static/template/fonts/text-lighter.ttf) format("truetype"), url(/static/template/fonts/text-lighter.svg#text-lighter) format("svg");
+	src: url(/eleicoes/2020/static/template/fonts/text-lighter.eot);
+	src: local("?"), url(/eleicoes/2020/static/template/fonts/text-lighter.eot#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-lighter.woff) format("woff"), url(/eleicoes/2020/static/template/fonts/text-lighter.ttf) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-lighter.svg#text-lighter) format("svg");
 	font-weight: 100;
 	font-style: normal
 }
 
 @font-face {
 	font-family: TextLight;
-	src: url(/assets/eleicoes/template/fonts/text-light.eot);
-	src: local("?"), url(/assets/eleicoes/template/fonts/text-light.eot#iefix) format("embedded-opentype"), url(/assets/eleicoes/template/fonts/text-light.woff) format("woff"), url(/assets/eleicoes/template/fonts/text-light.ttf) format("truetype"), url(/assets/eleicoes/template/fonts/text-light.svg#text-light) format("svg");
+	src: url(/eleicoes/2020/static/template/fonts/text-light.eot);
+	src: local("?"), url(/eleicoes/2020/static/template/fonts/text-light.eot#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-light.woff) format("woff"), url(/eleicoes/2020/static/template/fonts/text-light.ttf) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-light.svg#text-light) format("svg");
 	font-weight: 300;
 	font-style: normal
 }
 
 @font-face {
 	font-family: Text;
-	src: url(/static/template/fonts/text-regular.eot);
-	src: local("?"), url(/static/template/fonts/text-regular.eot#iefix) format("embedded-opentype"), url(/static/template/fonts/text-regular.woff) format("woff"), url(/static/template/fonts/text-regular.ttf) format("truetype"), url(/static/template/fonts/text-regular.svg#text-regular) format("svg");
+	src: url(/eleicoes/2020/static/template/fonts/text-regular.eot);
+	src: local("?"), url(/eleicoes/2020/static/template/fonts/text-regular.eot#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-regular.woff) format("woff"), url(/eleicoes/2020/static/template/fonts/text-regular.ttf) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-regular.svg#text-regular) format("svg");
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
 	font-family: TextBold;
-	src: url(/assets/eleicoes/template/fonts/text-bold.eot?v5);
-	src: local("?"), url(/assets/eleicoes/template/fonts/text-bold.eot?#iefix) format("embedded-opentype"), url(/assets/eleicoes/template/fonts/text-bold.woff?v5) format("woff"), url(/assets/eleicoes/template/fonts/text-bold.ttf?v5) format("truetype"), url(/assets/eleicoes/template/fonts/text-bold.svg?v5#text-bold) format("svg");
+	src: url(/eleicoes/2020/static//*
+ * Projeto: eleicoes2020
+ * Arquivo: mobile.css
+ * ---------------------------------------------------------------------
+ * Autor: Leonardo Nascimento
+ * E-mail: leonardo.nascimento21@gmail.com
+ * ---------------------------------------------------------------------
+ * Data da criação: 30/10/2020 5:03:27 pm
+ * Last Modified:  09/11/2020 4:10:09 pm
+ * Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
+ * ---------------------------------------------------------------------
+ * Copyright (c) 2020 Leo
+ * HISTORY:
+ * Date      	By	Comments
+ * ----------	---	---------------------------------------------------------
+ */
+template/fonts/text-bold.eot?v5);
+	src: local("?"), url(/eleicoes/2020/static/template/fonts/text-bold.eot?#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-bold.woff?v5) format("woff"), url(/eleicoes/2020/static/template/fonts/text-bold.ttf?v5) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-bold.svg?v5#text-bold) format("svg");
 	font-weight: 700;
 	font-style: normal
 }
 
 @font-face {
 	font-family: Icons;
-	src: url(/static/template/fonts/icones-setas.eot?v2);
-	src: url(/static/template/fonts/icones-setas.eot?v2#iefix) format("embedded-opentype"), url(/static/template/fonts/icones-setas.woff?v2) format("woff"), url(/static/template/fonts/icones-setas.ttf?v2) format("truetype"), url(/static/template/fonts/icones-setas.svg?v2#icones-setas) format("svg");
+	src: url(/eleicoes/2020/static/template/fonts/icones-setas.eot?v2);
+	src: url(/eleicoes/2020/static/template/fonts/icones-setas.eot?v2#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/icones-setas.woff?v2) format("woff"), url(/eleicoes/2020/static/template/fonts/icones-setas.ttf?v2) format("truetype"), url(/eleicoes/2020/static/template/fonts/icones-setas.svg?v2#icones-setas) format("svg");
 	font-weight: 400;
 	font-style: normal
 }
@@ -327,8 +343,8 @@ textarea {
 
 @font-face {
     font-family: Icons;
-    src: url(/assets/eleicoes/template/fonts/icones-setas.eot?v2);
-    src: url(/assets/eleicoes/template/fonts/icones-setas.eot?v2#iefix) format("embedded-opentype"), url(/assets/eleicoes/template/fonts/icones-setas.woff?v2) format("woff"), url(/assets/eleicoes/template/fonts/icones-setas.ttf?v2) format("truetype"), url(/assets/eleicoes/template/fonts/icones-setas.svg?v2#icones-setas) format("svg");
+    src: url(/eleicoes/2020/static/template/fonts/icones-setas.eot?v2);
+    src: url(/eleicoes/2020/static/template/fonts/icones-setas.eot?v2#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/icones-setas.woff?v2) format("woff"), url(/eleicoes/2020/static/template/fonts/icones-setas.ttf?v2) format("truetype"), url(/eleicoes/2020/static/template/fonts/icones-setas.svg?v2#icones-setas) format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -919,31 +935,31 @@ textarea {
 
 @font-face {
     font-family: Text;
-    src: url(/assets/eleicoes/template/fonts/text-lighter.eot);
-    src: local("?"), url(/assets/eleicoes/template/fonts/text-lighter.eot#iefix) format("embedded-opentype"), url(/assets/eleicoes/template/fonts/text-lighter.woff) format("woff"), url(/assets/eleicoes/template/fonts/text-lighter.ttf) format("truetype"), url(/assets/eleicoes/template/fonts/text-lighter.svg#text-lighter) format("svg");
+    src: url(/eleicoes/2020/static/template/fonts/text-lighter.eot);
+    src: local("?"), url(/eleicoes/2020/static/template/fonts/text-lighter.eot#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-lighter.woff) format("woff"), url(/eleicoes/2020/static/template/fonts/text-lighter.ttf) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-lighter.svg#text-lighter) format("svg");
     font-weight: 100;
     font-style: normal
 }
 
 @font-face {
     font-family: TextLight;
-    src: url(/assets/eleicoes/template/fonts/text-light.eot);
-    src: local("?"), url(/assets/eleicoes/template/fonts/text-light.eot#iefix) format("embedded-opentype"), url(/assets/eleicoes/template/fonts/text-light.woff) format("woff"), url(/assets/eleicoes/template/fonts/text-light.ttf) format("truetype"), url(/assets/eleicoes/template/fonts/text-light.svg#text-light) format("svg");
+    src: url(/eleicoes/2020/static/template/fonts/text-light.eot);
+    src: local("?"), url(/eleicoes/2020/static/template/fonts/text-light.eot#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-light.woff) format("woff"), url(/eleicoes/2020/static/template/fonts/text-light.ttf) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-light.svg#text-light) format("svg");
     font-weight: 300;
     font-style: normal
 }
 
 @font-face {
     font-family: Text;
-    src: url(/assets/eleicoes/template/fonts/text-regular.eot);
-    src: local("?"), url(/assets/eleicoes/template/fonts/text-regular.eot#iefix) format("embedded-opentype"), url(/assets/eleicoes/template/fonts/text-regular.woff) format("woff"), url(/assets/eleicoes/template/fonts/text-regular.ttf) format("truetype"), url(/assets/eleicoes/template/fonts/text-regular.svg#text-regular) format("svg");
+    src: url(/eleicoes/2020/static/template/fonts/text-regular.eot);
+    src: local("?"), url(/eleicoes/2020/static/template/fonts/text-regular.eot#iefix) format("embedded-opentype"), url(/eleicoes/2020/static/template/fonts/text-regular.woff) format("woff"), url(/eleicoes/2020/static/template/fonts/text-regular.ttf) format("truetype"), url(/eleicoes/2020/static/template/fonts/text-regular.svg#text-regular) format("svg");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: TextBold;
-    src: url(/assets/eleicoes/template/fonts/text-bold.eot);
+    src: url(/eleicoes/2020/static/template/fonts/text-bold.eot);
     font-weight: 700;
     font-style: normal
 }

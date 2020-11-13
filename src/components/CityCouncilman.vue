@@ -7,7 +7,7 @@
   E-mail: leonardo.nascimento21@gmail.com
   ---------------------------------------------------------------------
   Data da criação: 19/10/2020 1:57:48 pm
-  Last Modified:  30/10/2020 3:37:02 pm
+  Last Modified:  12/11/2020 11:58:47 am
   Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
   ---------------------------------------------------------------------
   Copyright (c) 2020 Leo
@@ -67,16 +67,16 @@
 									</div>
 								</li>
 								<li class="item-name">{{vereador.nm}}</li>
-								<li class="item-social">
+								<!-- <li class="item-social">
 									<span class="icon-facebook" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_facebook" data-image="https://dev.cgn.inf.br/assets/eleicoes/apuracao.png" data-title="Apuração - Governador - Paraná: RATINHO JUNIOR se elegeu!" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr">
 									</span>
 									<span class="icon-twitter" data-metrics-location="bloco candidatos" data-metrics-action="compartilhar_candidato_twitter" data-title="Apuração - Governador - Paraná: RATINHO JUNIOR se elegeu!" data-desc="Veja mais em: https://dev.cgn.inf.br/eleicoes/pr" data-url="https://dev.cgn.inf.br/eleicoes/pr">
 									</span>
-								</li>
+								</li> -->
 								<li class="item-small-set">
 									<ul>
 									<li class="item-party">{{vereador.cc | politicalParty}}</li>
-									<li class="item-votes-vp">{{vereador.vap | votePercentage}}<span>%</span></li>
+									<li class="item-votes-vp">{{vereador.pvap}}<span>%</span></li>
 									</ul>
 								</li>
 								<li class="item-votes-v">{{vereador.vap | voteTotal}}</li>
@@ -102,8 +102,6 @@
 </template>
 
 <script>
-//var baseUrlEstadosJson = "/assets/eleicoes/1turno/estado/json/";
-//$.getJSON( baseUrlEstadosJson+estado+"/"+estado+"-c"+cargo+"-e00"+neEstadual+".json?t="+timestamp, function( data ) {
 export default {
 	name: 'CityConcilman',
 	data () {
@@ -118,10 +116,10 @@ export default {
 		}
 	},
 	filters: {
-		votePercentage: function (value) {
+		votePercentage: function (value, eleitoresTotal) {
 			if (value > 0){
 				var percentage;
-				percentage = value * 100 / 591310;
+				percentage = value * 100 / eleitoresTotal;
 				percentage = parseFloat(percentage.toFixed(2));
 				percentage = percentage.toString();
 				percentage = percentage.replace(".", ",");
@@ -153,99 +151,65 @@ export default {
 			}
 			return novo;
 		},
-
-		async listarVereadores() {
-
-		 var vm = this;
-
-		 // Url de teste 
-        //   var url = this.baseUrl + '/static/1turno/ele2020/divulgacao/simulado/8707/dados-simplificados/pr/pr'+this.cidadeSelecionada.codigo+'-c0013-e008707-r.json';
-		  
-		   var url = 'static/requests/eleicoes/ro00396-c0013-e008334-r.json';
-        const requestVereador = axios.get(url);
-        this.finishLoadData = false;
-        axios
-          .all([requestVereador])
-          .then(
-            axios.spread((...responses) => {
-				const response = responses[0];
-				this.vereadores = response.data.cand;
-				this.infoVereadores = {
-					cVotosBrancos: response.data['vb'],
-					cVotosNulos: response.data['vn'],
-					cVotosValidos: response.data['vv'],
-					eleitoresTotal: response.data['e'],
-				}
-				this.infoVereadores.pVotosBrancos = this.infoVereadores.cVotosBrancos * 100 / this.infoVereadores.eleitoresTotal;
-				this.infoVereadores.pVotosBrancos = parseFloat(this.infoVereadores.pVotosBrancos.toFixed(2));
-				this.infoVereadores.pVotosBrancos = this.infoVereadores.pVotosBrancos.toString();
-				this.infoVereadores.pVotosBrancos = this.infoVereadores.pVotosBrancos.replace(".", ","); 
-				this.infoVereadores.cVotosBrancos = this.milhar(this.infoVereadores.cVotosBrancos);
-
-				this.infoVereadores.pVotosNulos = this.infoVereadores.cVotosNulos * 100 / this.infoVereadores.eleitoresTotal;
-				this.infoVereadores.pVotosNulos = parseFloat(this.infoVereadores.pVotosNulos.toFixed(2)); 
-				this.infoVereadores.pVotosNulos = this.infoVereadores.pVotosNulos.toString();
-				this.infoVereadores.pVotosNulos = this.infoVereadores.pVotosNulos.replace(".", ",");
-				this.infoVereadores.cVotosNulos = this.milhar(this.infoVereadores.cVotosNulos);
-				
-				this.infoVereadores.pVotosValidos = this.infoVereadores.cVotosValidos * 100 / this.infoVereadores.eleitoresTotal;
-				this.infoVereadores.pVotosValidos = parseFloat(this.infoVereadores.pVotosValidos.toFixed(2)); 
-				this.infoVereadores.pVotosValidos = this.infoVereadores.pVotosValidos.toString();
-				this.infoVereadores.pVotosValidos = this.infoVereadores.pVotosValidos.replace(".", ",");
-				this.infoVereadores.cVotosValidos = this.milhar(this.infoVereadores.cVotosValidos);
-            })
-          ).finally(() => {
-              this.finishLoadData = true;
-            })
-          .catch(errors => {
-           this.finishLoadData = true;
-            console.error(errors);
-          });
-		}
 	},
 	mounted(){
-		// Senão existir parâmetro na url pega a cidade Padrão Cascavel 
-      if(this.$router.history.current.params.id == 'undefined'){
-        this.cidadeSelecionada.code = "74934";
-      } else {
-        this.cidadeSelecionada.code = this.$router.history.current.params.id;
-	  }
-	  
-		this.listarVereadores();
-		setInterval(async () => {
-			this.listarVereadores();
-		}, 10000)
+		this.$root.$on('dadosVereador', (response) => {
+			this.vereadores = response.cand;
+			console.log(response);
+			this.infoVereadores = {
+				cVotosBrancos: response['vb'],
+				pVotosBrancos: response['pvb'],
+				cVotosNulos: response['vn'],
+				pVotosNulos: response['ptvn'],
+				cVotosValidos: response['vv'],
+				pVotosValidos: response['pvvc'],
+				eleitoresTotal: response['e'],
+			}
+			// this.infoVereadores.pVotosBrancos = this.infoVereadores.cVotosBrancos * 100 / this.infoVereadores.eleitoresTotal;
+			// this.infoVereadores.pVotosBrancos = parseFloat(this.infoVereadores.pVotosBrancos.toFixed(2));
+			// this.infoVereadores.pVotosBrancos = this.infoVereadores.pVotosBrancos.toString();
+			// this.infoVereadores.pVotosBrancos = this.infoVereadores.pVotosBrancos.replace(".", ","); 
+			// this.infoVereadores.cVotosBrancos = this.milhar(this.infoVereadores.cVotosBrancos);
 
-
-		this.$root.$on('cidadeSelecionada', (event) => {
-			      console.log('id active');
-			      console.log(event);
-
-
-			});
+			// this.infoVereadores.pVotosNulos = this.infoVereadores.cVotosNulos * 100 / this.infoVereadores.eleitoresTotal;
+			// this.infoVereadores.pVotosNulos = parseFloat(this.infoVereadores.pVotosNulos.toFixed(2)); 
+			// this.infoVereadores.pVotosNulos = this.infoVereadores.pVotosNulos.toString();
+			// this.infoVereadores.pVotosNulos = this.infoVereadores.pVotosNulos.replace(".", ",");
+			// this.infoVereadores.cVotosNulos = this.milhar(this.infoVereadores.cVotosNulos);
+			
+			// this.infoVereadores.pVotosValidos = this.infoVereadores.cVotosValidos * 100 / this.infoVereadores.eleitoresTotal;
+			// this.infoVereadores.pVotosValidos = parseFloat(this.infoVereadores.pVotosValidos.toFixed(2)); 
+			// this.infoVereadores.pVotosValidos = this.infoVereadores.pVotosValidos.toString();
+			// this.infoVereadores.pVotosValidos = this.infoVereadores.pVotosValidos.replace(".", ",");
+			// this.infoVereadores.cVotosValidos = this.milhar(this.infoVereadores.cVotosValidos);
+		});
 			
 	},
 	computed: {
 		rListarVereadores: function() {
-			// alert(this.$options.filters.votePercentage('677957'));
 			function compare(a, b) {
-				if(a.e == "s"){
-					return -1;
-				}
-				if(b.e == "s"){
-					return 0;
-				}
+				// if(a.e == "s"){
+				// 	return -1;
+				// }
+				// if(b.e == "s"){
+				// 	return 0;
+				// }
 				if (Number(a.vap) > Number(b.vap)) {
+					return -1;
+				}else if(b.e == 's'){
 					return -1;
 				}
 				if (Number(a.vap) < Number(b.vap)){
 					return 0;
 				}
 			}
+			
+			// Exibe no max 50 candidatos a vereador
+			var vereadoresList = this.vereadores.sort(compare).slice(0,50);
 
-			var vereadoresList = this.vereadores.sort(compare);
-
-			if(this.searchQuery){
+			if(this.searchQuery && this.searchQuery.length > 3){
+				// Minímo 3 caracteres e pesquisa em todo o json
+				vereadoresList = this.vereadores.sort(compare);
 				return vereadoresList.filter((item)=>{
 					return this.searchQuery.toLowerCase().split(' ').every(v => item.nm.toLowerCase().includes(v)) || 
 					this.searchQuery.toLowerCase().split(' ').every(v => item.cc.toLowerCase().includes(v))
@@ -257,3 +221,9 @@ export default {
 	}
 }
 </script>
+
+<style>
+.elected-2.item-notification:before {
+	content: "S";
+}
+</style>
