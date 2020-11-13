@@ -1,9 +1,6 @@
 .DS_Store
 node_modules/
 /dist/
-/static/eleicoes/fotos/
-/static/eleicoes/1turno/pa/json
-/static/fotos/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
