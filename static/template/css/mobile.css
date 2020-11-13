@@ -970,6 +970,8 @@ textarea {
     position: relative;
     background-color: #fff;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .header-bar .title {
@@ -985,6 +987,10 @@ textarea {
 .gate-open .header-bar .share,
 .header-bar .title .election {
     display: none
+}
+.header-bar .share {
+    position: relative !important;
+    display: block !important;
 }
 
 .header-bar .title .icon-cgn {
