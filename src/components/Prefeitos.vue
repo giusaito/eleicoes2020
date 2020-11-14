@@ -1,23 +1,21 @@
-<template>
- <!-- 
+<!-- 
   Projeto: eleicoes2020
   Arquivo: Prefeitos.vue
   ---------------------------------------------------------------------
   Autor: Leonardo Nascimento
-  E-mail: leonardo.nascimento21@gmail.com
+  E-mail: oi@bewweb.com.br
   ---------------------------------------------------------------------
-  Data da criação: 20/10/2020 4:21:58 pm
-  Last Modified:  13/11/2020 5:47:55 pm
-  Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
+  Data da criação: 13/11/2020 9:40:07 pm
+  Last Modified:  13/11/2020 11:28:26 pm
+  Modificado por: Leonardo Nascimento - <oi@bewweb.com.br>
   ---------------------------------------------------------------------
-  Copyright (c) 2020 Leo
+  Copyright (c) 2020 Bewweb
   HISTORY:
   Date      	By	Comments
   ----------	---	---------------------------------------------------------
- -->
-
+  -->
+<template>
   <div>
-
     <!-- <div v-bind:class="{siteload: !finishLoadSite}"></div> -->
     <div v-bind:class="{loader: finishLoadData}"></div>
     <!-- 
@@ -128,9 +126,6 @@
                 <div class="share">
                   <a href="#" @click="socialShare(facebook)">
                     <i class="icon icon-facebook"></i>
-                  </a>
-                  <a href="#" @click="socialShare(twitter)">
-                    <i class="icon icon-twitter"></i>
                   </a>
                   <a href="#" @click="socialShare(whatsapp)">
                     <i class="icon icon-whatsapp"></i>
@@ -459,7 +454,7 @@ export default {
     width: 100% !important;
   }
   .city-mayor .uniqueCandidate {
-    margin-top: -5%;
+    margin-top: -7%;
   }
 
 .loader {

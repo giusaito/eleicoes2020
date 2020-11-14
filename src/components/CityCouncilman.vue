@@ -1,20 +1,20 @@
-<template>
- <!-- 
+<!-- 
   Projeto: eleicoes2020
   Arquivo: CityCouncilman.vue
   ---------------------------------------------------------------------
   Autor: Leonardo Nascimento
-  E-mail: leonardo.nascimento21@gmail.com
+  E-mail: oi@bewweb.com.br
   ---------------------------------------------------------------------
-  Data da criação: 19/10/2020 1:57:48 pm
-  Last Modified:  13/11/2020 5:52:54 pm
-  Modified By: Leonardo Nascimento - <leonardo.nascimento21@gmail.com> / MAC OS
+  Data da criação: 13/11/2020 9:40:07 pm
+  Last Modified:  14/11/2020 12:16:54 am
+  Modificado por: Leonardo Nascimento - <oi@bewweb.com.br>
   ---------------------------------------------------------------------
-  Copyright (c) 2020 Leo
+  Copyright (c) 2020 Bewweb
   HISTORY:
   Date      	By	Comments
   ----------	---	---------------------------------------------------------
- -->
+  -->
+<template>
 	<div>
 		<div class="city-councilman fullheight">
 		  <h2 class="heading">VEREADORES</h2>
@@ -202,7 +202,7 @@ export default {
 			// Exibe no max 50 candidatos a vereador
 			var vereadoresList = this.vereadores.sort(compare).slice(0,50);
 
-			if(this.searchQuery && this.searchQuery.length > 3){
+			if(this.searchQuery && this.searchQuery.length > 2){
 				// Minímo 3 caracteres e pesquisa em todo o json
 				vereadoresList = this.vereadores.sort(compare);
 				return vereadoresList.filter((item)=>{
@@ -216,9 +216,3 @@ export default {
 	}
 }
 </script>
-
-<style>
-.elected-2.item-notification:before {
-	content: "S";
-}
-</style>
